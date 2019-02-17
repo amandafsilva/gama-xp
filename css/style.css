@@ -1,1 +1,10 @@
-style.css
+/*CSS Document*/
+
+.posts {
+	justify-content: flex-end;
+}
+
+img {
+	border: 1px solid black;
+}
+
