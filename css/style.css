@@ -12,6 +12,7 @@ body {
 
 .posts {
 	justify-content: flex-end;
+	position: relative;
 }
 
 .posts img {
