@@ -18,36 +18,71 @@
 
 </head>
 <body>
+
+	<header>
+			<img src="img/logo.png" class="logo">
+			<ul class='min950'>
+				<li><a href="#">Test</a></li>
+				<li><a href="#">Test</a></li>
+				<li><a href="#">Test</a></li>
+			</ul>
+			<button class='openmenu' onClick='menu()'>
+				<img src='img/menu.png' />
+			</button>
+		<div class='max550'>
+			<button class='closemenu' onClick='menu()'>
+				<img src='img/close.png' />
+			</button>
+			<ul class='max550ul'>
+				<li><a href="#">Test</a></li>
+				<li><a href="#">Test</a></li>
+				<li><a href="#">Test</a></li>
+			</ul>
+		</div>
+	</header>
+
 	<div class="posts">
 		<div class="destaque"></div>
 		<div class="post1">
-			<img src="imagempost/imagens">
+			<img src="https://via.placeholder.com/140x100">
 			<h3>Blog Post #01</h3>
 			<
 		</div>
 		<div class="post2">
-			<img src="imagempost/imagens">
+			<img src="https://via.placeholder.com/140x100">
 			<h3>Blog Post #02</h3>
 		</div>
 		<div class="post3">
-			<img src="imagempost/imagens">
+			<img src="https://via.placeholder.com/140x100">
 			<h3>Blog Post #03</h3>
 		</div>
 		<div class="post4">
-			<img src="imagempost/imagens">
+			<img src="https://via.placeholder.com/140x100">
 			<h3>Blog Post #04</h3>
 		</div>
 		<div class="post5">
-			<img src="imagempost/imagens">
+			<img src="https://via.placeholder.com/140x100">
 			<h3>Blog Post #05</h3>
 		</div>
 		<div class="post6">
-			<img src="imagempost/imagens">
+			<img src="https://via.placeholder.com/140x100">
 			<h3>Blog Post #06</h3>
 		</div>
 
 	</div>
-	
+
+	<script>
+		let menuOpen = false
+		function menu(){
+			if(menuOpen == false) {
+				document.querySelector('.max550').style = 'left: 0';
+				menuOpen = true
+			}else {
+				document.querySelector('.max550').style = 'left: -50%';
+				menuOpen = false;
+			}
+		}
+	</script>
 
 </body>
 </html>
