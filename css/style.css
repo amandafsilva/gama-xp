@@ -20,10 +20,9 @@ header {
 	width: 100%;
 	background-color: rgba(0,0,0,0.9);
 	height: 80px;
-	flex-shrink: 0;
-	/*position: fixed;
+	position: fixed;
 	top: 0;
-	z-index: 900;*/
+	z-index: 900;
 }
 
 .header-logo img {
@@ -74,7 +73,7 @@ header ul li a:hover {
 	background-size: cover;
 	background-position: center;
 	width: 100%;
-	height: calc(100vh - 80px);
+	height: 100vh;
 }
 
 .main-page-cover img {
