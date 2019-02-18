@@ -20,6 +20,10 @@ function b2cORb2b (email){
             break;
     }
 }
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
 document.addEventListener("DOMContentLoaded", event => {
     var config = {
         apiKey: "AIzaSyDkaP66Dq0eVpZgkBu6FXyrjuOmV8EBGNc",
@@ -84,11 +88,13 @@ function insertLead(){
     if(lnome === "" || lsnome === "" || lemail === "" || ltel === "" || lempresa === "" || lsegmento === ""){
         alert("Todos os campos devem ser preenchidos!");
     }else{
-        firebase.database().ref('leads/').child(lemail.replace("@","at").replace(".","dot")).set({nome: lnome, snome: lsnome, email: lemail, tel: ltel, empresa: lempresa, segmento: lsegmento, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail)}, function(error){
-        //firebase.database().ref('leads/').child(lemail).set('teste', function(error){
-            if(error) alert("ERRO");
-            else alert("Email cadastrado!");
-        });
+        if(validateEmail(lemail)){
+            firebase.database().ref('leads/').child(lemail.replace("@","at").replace(".","dot")).set({nome: lnome, snome: lsnome, email: lemail, tel: ltel, empresa: lempresa, segmento: lsegmento, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail)}, function(error){
+            //firebase.database().ref('leads/').child(lemail).set('teste', function(error){
+                if(error) alert("ERRO: Email já cadastrado!");
+                else alert("Email cadastrado!");
+            });
+        }else alert("O email não é válido!");
     }
 
 }
