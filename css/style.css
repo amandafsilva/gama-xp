@@ -353,7 +353,14 @@ footer ul li a:hover {
 	}
 
 	.footer-body {
-		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.footer-logo {
+		display: flex;
+		justify-content: center;
 		align-items: center;
 	}
 }
