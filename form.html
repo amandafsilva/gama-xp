@@ -131,6 +131,7 @@
 
 </head>
 <body>
+<<<<<<< HEAD
 	
   <header>
     <div class="header-body">
@@ -157,6 +158,37 @@
       </div>
     </div>
   </header>          
+=======
+	<script>
+		var num1,num2;
+		document.addEventListener("DOMContentLoaded", event => {
+			num1 = Math.floor((Math.random() * 20) + 1);
+			num2 = Math.floor((Math.random() * 20) + 1);
+			document.getElementById("captcha").innerHTML = `${num1}+${num2}`;
+			document.getElementById("receberebook").addEventListener("click", e => {
+				let nome = document.getElementById("nome").value;
+				let email = document.getElementById("email").value;
+				let empresa = document.getElementById("empresa").value;
+				let segmento = document.getElementById("segmento").value;
+				if(nome == "" || email == "" || empresa == "" || segmento == ""){
+					alert("Todos os campos devem ser preenchidos!");
+				}
+				else if(document.getElementById("captchatext").value != num1+num2){
+					alert("O número digitado está incorreto!");
+				}else{
+					//TODO: Cadastra lead e envia ebook
+				}
+			});
+		});
+	</script>
+	<div class="retorno">
+		<a href="index.html">  
+		      <div class="form-header">
+		      	<img src="img/logoopinion.png" class="logo">
+		      </div>
+		</a>
+            
+>>>>>>> 5cddf32c202f585575b480b72291ef40ecd58acf
         	
 	<div class="cadastro">
 		<div class="apresent">
@@ -168,26 +200,26 @@
 			<form>
 				<div class="name-form">
 					<label class="form-label">Nome:</label>	
-					<input type="text" name="nome" class="resp" maxlength="50">
+					<input type="text" name="nome" class="resp" maxlength="50" id="nome">
 				</div>
 				<div class="email-form">
 					<label class="form-label">Email: </label>
-					<input type="text" name="email" class="resp" maxlength="50">
+					<input type="text" name="email" class="resp" maxlength="50" id="email">
 				</div>
 				<div class="empresa-form">
 					<label class="form-label">Empresa:</label>
-					<input type="text" name="empresa" class="resp" maxlength="50">
+					<input type="text" name="empresa" class="resp" maxlength="50" id="empresa">
 				</div>
 				<div class="segmento-form">
 					<label class="form-label">Segmento:</label>
-					<input type="text" name="segmento" class="resp" maxlength="50">
+					<input type="text" name="segmento" class="resp" maxlength="50" id="segmento">
 				</div>
 				<div class="naorobo-form">
-					<label class="form-label">12+4</label>
-					<input type="text" name="resultado" class="resp" maxlength="50">
+					<label class="form-label" id="captcha">12+4</label>
+					<input type="text" name="resultado" class="resp" maxlength="50" id="captchatext">
 				</div>
 			<div class="botao">
-				<button class="form-enviar"><b>QUERO RECEBER MEU E-BOOK</b></button>
+				<button class="form-enviar" id="receberebook"><b>QUERO RECEBER MEU E-BOOK</b></button>
 			</div>
 			<div class="form-aviso">
                     Prometemos não utilizar suas informações de contato para enviar qualquer tipo de SPAM.
