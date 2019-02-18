@@ -90,14 +90,12 @@
             width: 100%;
         }
         </style>
+        <script defer src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
     </head>
     <body>
+        <script src="app.js"></script>
         <div class="second-form-header">
-<<<<<<< HEAD
             <a href="index.html"><img src="img/header.png" class="logo"></a>
-=======
-            <img src="img/header.png">
->>>>>>> 6bc12c41ce61b5d8e04250e9b8e8ea324c2bec7c
         </div>
 
         <div class="second-form-body">
@@ -107,35 +105,35 @@
                 <div class="form-inputs-row">
                     <div class="input-container margin-right-one">
                         <label class="second-form-label">Nome:</label>
-                        <input type="text" class="form-input"/>
+                        <input type="text" class="form-input" id="nome"/>
                     </div>
                     <div class="input-container">
                         <label class="second-form-label">Sobrenome:</label>
-                        <input type="text" class="form-input"/>
+                        <input type="text" class="form-input" id="snome"/>
                     </div>
                 </div>
                 <div class="form-inputs-row">
                     <div class="input-container margin-right-one">
                         <label class="second-form-label">Email de trabalho:</label>
-                        <input type="text" class="form-input"/>
+                        <input type="text" class="form-input" id="email"/>
                     </div>
                     <div class="input-container">
                         <label class="second-form-label">Telefone:</label>
-                        <input type="text" class="form-input"/>
+                        <input type="text" class="form-input" id="tel"/>
                     </div>
                 </div>
                 <div class="form-inputs-row">
                     <div class="input-container margin-right-one">
                         <label class="second-form-label">Empresa</label>
-                        <input type="text" class="form-input"/>
+                        <input type="text" class="form-input" id="empresa"/>
                     </div>
                     <div class="input-container">
                         <label class="second-form-label">Segmento:</label>
-                        <input type="text" class="form-input"/>
+                        <input type="text" class="form-input" id="segmento"/>
                     </div>
                 </div>
 
-                <button class="form-button">Quero receber o conteúdo</button>
+                <button class="form-button" onclick="insertLead()">Quero receber o conteúdo</button>
 
                 <div class="form-message">
                     Prometemos não utilizar suas informações de contato para enviar qualquer tipo de SPAM.
