@@ -11,12 +11,21 @@ body {
 }
 
 .posts {
-	justify-content: flex-end;
-	position: relative;
+	/*margin-top: 70px;*/
+	display: flex;
+	flex-direction: row;
+}
+.post {
+	width: 80px;
+	height: 80px;
+	margin-top: 30px;
+	text-align: center;
+
+
 }
 
 .posts img {
-	border: 1px solid black;
+	border: 20	px solid black;
 }
 
 
