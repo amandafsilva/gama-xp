@@ -45,6 +45,8 @@
         .second-form-body {
             height: calc(100vh - 150px);
             overflow: auto;
+            display: flex;
+            flex-direction: column;
         }
         .second-form-content {
             text-align: center;
@@ -103,6 +105,35 @@
         .input-container {
             width: 100%; 
         }
+
+        @media screen and (max-width: 1010px){
+            .form-inputs-container {
+                width: 60%;
+            }
+        }
+        @media screen and (max-width: 850px){
+            .form-inputs-container {
+                width: 70%;
+            }
+        }
+        @media screen and (max-width: 650px){
+            .form-inputs-container {
+                width: 80%;
+            }
+        }
+        @media screen and (max-width: 650px){
+            .form-inputs-container {
+                width: 90%;
+            }
+
+            .form-inputs-row {
+                flex-wrap: wrap;
+            }
+
+            .margin-right-one {
+                margin: 0;
+            }
+        }
         </style>
         <script defer src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
         <script src="app.js"></script>
@@ -116,52 +147,54 @@
 
         <div class="second-form-body">
             <div class="second-form-content">
-                    <h3 >Cadastre-se para fazer sua pesquisa de mercado</h3>
-        
-                    <div class="form-inputs-container">
-                        <div class="form-inputs-row">
-                            <div class="input-container margin-right-one">
-                                <label class="second-form-label">Nome:</label>
-                                <input type="text" class="form-input" id="nome"/>
-                            </div>
-                            <div class="input-container">
-                                <label class="second-form-label">Sobrenome:</label>
-                                <input type="text" class="form-input" id="snome"/>
-                            </div>
+                <h3>Cadastre-se para fazer sua pesquisa de mercado</h3>
+    
+                <div class="form-inputs-container">
+                    <div class="form-inputs-row">
+                        <div class="input-container margin-right-one">
+                            <label class="second-form-label">Nome:</label>
+                            <input type="text" class="form-input" id="nome"/>
                         </div>
-                        <div class="form-inputs-row">
-                            <div class="input-container margin-right-one">
-                                <label class="second-form-label">Email de trabalho:</label>
-                                <input type="text" class="form-input" id="email"/>
-                            </div>
-                            <div class="input-container">
-                                <label class="second-form-label">Telefone:</label>
-                                <input type="text" class="form-input" id="tel"/>
-                            </div>
-                        </div>
-                        <div class="form-inputs-row">
-                            <div class="input-container margin-right-one">
-                                <label class="second-form-label">Empresa</label>
-                                <input type="text" class="form-input" id="empresa"/>
-                            </div>
-                            <div class="input-container">
-                                <label class="second-form-label">Segmento:</label>
-                                <input type="text" class="form-input" id="segmento"/>
-                            </div>
-                        </div>
-        
-                        <button class="form-button" onclick="insertLead()">Quero receber o conteúdo</button>
-        
-                        <div class="form-message">
-                            Prometemos não utilizar suas informações de contato para enviar qualquer tipo de SPAM.
+                        <div class="input-container">
+                            <label class="second-form-label">Sobrenome:</label>
+                            <input type="text" class="form-input" id="snome"/>
                         </div>
                     </div>
+                    <div class="form-inputs-row">
+                        <div class="input-container margin-right-one">
+                            <label class="second-form-label">Email de trabalho:</label>
+                            <input type="text" class="form-input" id="email"/>
+                        </div>
+                        <div class="input-container">
+                            <label class="second-form-label">Telefone:</label>
+                            <input type="text" class="form-input" id="tel"/>
+                        </div>
+                    </div>
+                    <div class="form-inputs-row">
+                        <div class="input-container margin-right-one">
+                            <label class="second-form-label">Empresa</label>
+                            <input type="text" class="form-input" id="empresa"/>
+                        </div>
+                        <div class="input-container">
+                            <label class="second-form-label">Segmento:</label>
+                            <input type="text" class="form-input" id="segmento"/>
+                        </div>
+                    </div>
+    
+                    <button class="form-button" onclick="insertLead()">Quero receber o conteúdo</button>
+    
+                    <div class="form-message">
+                        Prometemos não utilizar suas informações de contato para enviar qualquer tipo de SPAM.
+                    </div>
                 </div>
+            </div>
         
-                <footer>
+            <footer>
                 <div class="footer-body">
-                    <img src="img/logo.png" class="logofooter">
-                    <div>
+                    <div class="footer-logo">
+                        <img src="img/logo.png" class="logofooter">
+                    </div>
+                        <div>
                         <p class="footer-title">Categorias</p>
                     </div>
                     <div>
