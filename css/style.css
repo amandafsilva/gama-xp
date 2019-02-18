@@ -244,24 +244,37 @@ footer ul li a:hover {
 }
 
 .logo{
-  	width: 18%;
+  	width: 20%;
   	cursor: pointer;
 }
 
 .logofooter{
-  	width:10%;
+  	width: 20%;
 }
 
 @media screen and (max-width: 1010px){
 	.main-page-body,
-	.header-body {
+	.header-body,
+	.footer-body {
 		padding: 0 5em;
+	}
+
+	.post {
+		width: 280px;
+	}
+}
+
+@media screen and (max-width: 740px){
+	.post {
+		width: 150px;
+		height: auto;
 	}
 }
 
 @media screen and (max-width: 550px){
 	.main-page-body,
-	.header-body {
+	.header-body,
+	.footer-body {
 		padding: 0 1em;
 	}
 
@@ -356,10 +369,6 @@ footer ul li a:hover {
 }
 
 @media screen and (max-width: 1000px){
-	.post:first-child {
-		display: none;
-	}
-
 	#degrade1 {
 		background: linear-gradient(to right, white, transparent);
 	}
