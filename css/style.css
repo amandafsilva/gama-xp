@@ -271,7 +271,62 @@ header {
     display: none;
   }
 
+<<<<<<< HEAD
   .post:last-child {
     display: none;
   }
 }
+=======
+  @media screen and (max-width: 550px){
+  	.logo{
+  		display: none;
+  	}
+
+    .min950{
+      display: none;
+    }
+
+    header {
+    	justify-content: start;
+    }
+
+    .openmenu {
+      display: block;
+      margin-left: 1%;
+      background: none;
+      border: none;
+    }
+    .closemenu{
+      display: block;
+      width: 70px;
+      margin-left: 1%;
+      background: none;
+      border: none;
+    }
+    .max550ul {
+      margin-top: 50px;
+    }
+    .max550 {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: -50%;
+      background: rgba(0,0,0,0.9);
+    }
+  }	
+
+  .info {
+    background-color: gray;
+    width: 500px;
+    height: 600px;
+    margin-top: 200px;
+    margin-bottom: 30px;
+    margin-left: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+>>>>>>> 6bc12c41ce61b5d8e04250e9b8e8ea324c2bec7c

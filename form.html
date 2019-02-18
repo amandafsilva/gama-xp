@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name='description' content=''>
+
+	<meta name='keywords' content=''>
+
+	<meta name='author' content='Força-Tarefa'>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+	<style>
+
+  .info {
+    background-color: darkgray;
+    width: 300px;
+    height: 400px;
+    margin-top: 200px;
+    margin-bottom: 30px;
+    margin-left: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: justify;
+    border: 1px solid gray;
+
+  }
+  .form-enviar {
+  		background-color: yellow;
+  		width: 50px;
+  		height: 100px;
+  		justify-content: center;
+  		display: flex;
+  }
+
+  .resp {
+  	width: 200px;
+  	height: 20px;
+  }
+
+  h3 {
+  	text-align: center;
+  }
+  .form-label {
+  	flex-direction: column;
+  	justify-content: flex-end;
+  	color: #191919;
+  }
+
+  .form-aviso{
+  	font-size: 0.8em;
+  	text-align: center;
+
+  
+  }
+	</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+<body>
+	<header>
+			<img src="img/logo.png" class="logo">
+			<ul class='min950'>
+				<li><a href="#">Test</a></li>
+				<li><a href="#">Test</a></li>
+				<li><a href="#">Test</a></li>
+			</ul>
+			<button class='openmenu' onClick='menu()'>
+				<img src='img/menu.png' />
+			</button>
+		<div class='max550'>
+			<button class='closemenu' onClick='menu()'>
+				<img src='img/close.png' />
+			</button>
+			<ul class='max550ul'>
+				<li><a href="#">Test</a></li>
+				<li><a href="#">Test</a></li>
+				<li><a href="#">Test</a></li>
+			</ul>
+		</div>
+	</header>
+	<div class="apresent"></div>
+	<div class="info">
+		<h3> Preencha aqui para usar o kit</h3>
+		<br>
+		<form>
+			<div class="name-form">
+				<label class="form-label">Nome:</label>	
+				<input type="text" name="nome" class="resp" maxlength="50">
+			</div>
+			<div class="email-form">
+				<label class="form-label">Email: </label>
+				<input type="text" name="email" class="resp" maxlength="50">
+			</div>
+			<div class="empresa-form">
+				<label class="form-label">Empresa:</label>
+				<input type="text" name="empresa" class="resp" maxlength="50">
+			</div>
+			<div class="segmento-form">
+				<label class="form-label">Segmento:</label>
+				<input type="text" name="segmento" class="resp" maxlength="50">
+			</div>
+			<div class="naorobo-form">
+				<label class="form-label">12+4</label>
+				<input type="text" name="resultado" class="resp" maxlength="50">
+			</div>
+			<div class="botao">
+				<button class="form-enviar">Quero receber meu e-book</button>
+			</div>
+			<div class="form-aviso">
+                    Prometemos não utilizar suas informações de contato para enviar qualquer tipo de SPAM.
+                </div>
+
+
+
+
+		</form>
+	</div>
+
+	<footer>
+		<img src="img/logo.png">
+		<div>
+			<ul>
+				<li><a>Test</a></li>
+				<li><a>Test</a></li>
+				<li><a>Test</a></li>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li><a>Test</a></li>
+				<li><a>Test</a></li>
+				<li><a>Test</a></li>
+			</ul>
+		</div>
+	</footer>
+
+</body>
+</html>
