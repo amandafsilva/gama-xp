@@ -113,9 +113,13 @@ header ul li a:hover {
 	margin-top: .5em;
 	outline-style: none;
 	text-decoration: none;
+	color: #000;
 }
+
 .cover-button:hover{
 	box-shadow: none;
+	box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.3);
+	opacity: .8;
 }
 
 #firstImg {
