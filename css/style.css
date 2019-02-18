@@ -257,12 +257,7 @@ footer ul li a:hover {
 }
 
 .logofooter{
-<<<<<<< HEAD
-  	max-width: 150px;
-  	max-height: 200px;
-=======
   	width: 10%;
->>>>>>> a6abdce658442038468a390bf309eede0232cdd7
 }
 
 @media screen and (max-width: 1010px){
