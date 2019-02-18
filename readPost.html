@@ -176,8 +176,8 @@
 	</footer>
 
 	<script type="text/javascript">
-		let id =
-		fetch('http://localhost:3000/postId/'+id).then((resp) => {
+		let id = sessionStorage.getItem('id')
+		fetch('https://gamaexp17-1.herokuapp.com/postId/'+id).then((resp) => {
 			if(resp.status == 200){
 				resp.json().then((e) => {
 					console.log(e)
