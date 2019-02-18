@@ -137,7 +137,7 @@
     	function sendPost(e){
     		e.preventDefault()
 
-    		fetch('http://localhost:3000/post', { method: 'post', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
+    		fetch('https://gamaexp17-1.herokuapp.com/post', { method: 'post', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
     				text: myEditor.getData()
     			})
     		}).then((resp) => {

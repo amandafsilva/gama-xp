@@ -100,13 +100,15 @@
 
 	<script type="text/javascript">
 		let main = document.querySelector('#coverPost')
-		fetch('http://localhost:3000/postAll').then((resp) => {
+		fetch('https://gamaexp17-1.herokuapp.com/postAll').then((resp) => {
 			if(resp.status == 200){
 				resp.json().then((e) => {
 					let posts = e.map((e) => {
 						var a = document.createElement('a')
-						a.setAttribute('href', 'readPost')
+						//a.setAttribute('href', 'readPost')
 						a.setAttribute('style', 'text-decoration: none; outline-style: none;')
+						a.setAttribute('id', e._id)
+						a.setAttribute('onclick', 'saveId(event, this.id)')
 						var divpost = document.createElement('div')
 						divpost.classList.add('post')
 						divpost.setAttribute('id', e._id)
@@ -131,6 +133,15 @@
 				alert('Não foi possivel achar o post');
 			}
 		}).catch((err) => alert(err))
+	</script>
+
+	<script type="text/javascript">
+		function saveId(e, id){
+			e.preventDefault()
+			console.log(id)
+			sessionStorage.setItem('id', id)
+			window.location.href = 'readPost'
+		}
 	</script>
 
 </body>
