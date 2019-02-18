@@ -171,7 +171,14 @@ footer {
 	color: #c837eb;
 }
 
+.footer-container {
+	display: flex;
+	justify-content: center;
+	margin-top: .5em;
+}
+
 .footer-text {
+	margin-left: .5em;
 	color: #fff;
 }
 
