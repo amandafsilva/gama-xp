@@ -14,18 +14,22 @@ body {
 	/*margin-top: 70px;*/
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
 }
 .post {
-	width: 80px;
-	height: 80px;
+	width: 300px;
+	height: 400px;
 	margin-top: 30px;
-	text-align: center;
+	text-align: justify;
 
 
 }
 
 .posts img {
-	border: 20	px solid black;
+	border: 1px solid gray;
+	width: 100%;
 }
 
 
