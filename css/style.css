@@ -17,8 +17,11 @@ body {
 
 header {
 	width: 100%;
-	background-color: rgba(0,0,0,1);
-	flex-shrink: 0;
+	background-color: rgba(0,0,0,0.9);
+	position: fixed;
+	top: 0;
+	z-index: 900;
+	height: 100px;
 }
 
 header ul {
@@ -55,11 +58,11 @@ header ul li a:hover {
 	display: flex;
     padding: 0 10em;
     justify-content: space-between;
+    align-items: center;
 }
 
 .main-page-body {
-	flex-grow: 1;
-	padding: 0 10em;
+	width: 100%;
 }
 
 .main-page-cover {
@@ -67,7 +70,8 @@ header ul li a:hover {
 	background-image: url('../img/main-page-header.jpg');
 	background-size: cover;
 	background-position: center;
-	height: 360px;
+	height: 100vh;
+	width: 100%;
 }
 
 .main-page-cover img {
@@ -123,7 +127,9 @@ header ul li a:hover {
 }
 
 #coverPost {
+	width: 70%;
 	height: auto;
+	margin: auto;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -140,6 +146,7 @@ header ul li a:hover {
 	justify-content: space-around;
 	transition: .5s;
 	cursor: pointer;
+	box-shadow: 0px 5px 5px silver;
 }
 
 .post:hover {
@@ -244,12 +251,14 @@ footer ul li a:hover {
 }
 
 .logo{
-  	width: 20%;
+  	max-width: 150px;
+  	max-height: 150px;
   	cursor: pointer;
 }
 
 .logofooter{
-  	width: 20%;
+  	max-width: 150px;
+  	max-height: 200px;
 }
 
 @media screen and (max-width: 1010px){
