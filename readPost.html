@@ -2,7 +2,7 @@
 <html>
 <head>
 
-	<title></title>
+	<title>Dataquest - Conteúdo para o sucesso do seu negócio</title>
 
 	<meta charset="utf-8">
 
@@ -17,26 +17,29 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-	<!--<script defer src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>-->
 
 	<style>
-		.cover-artigo{
-			margin: 100px 0;
+		header {
+			position: relative;
+			flex-shrink: 0;
+		}
+		.post-content {
+			flex: 1 0 auto;
+			display: flex;
+    		flex-direction: column;
 		}
 		.artigo {
 			width: 55%;
-			margin-top: 70px;
   			background: white;
-  			box-shadow: 0px 4px 5px silver;
 			text-align:left;
-  			padding:20px;
+  			padding: 1em;
+			margin: 0 auto;
 		}
-		.containerPerfil{
+		.containerPerfil {
   			display:flex;
   			flex-direction:row;
   			width:100%;
 			margin-top:30px;
-			margin-bottom:80px;  
 		}
 		.containerFoto{
   			flex: 1 0.5 50px;
@@ -86,30 +89,12 @@
 	<header>
 		<div class="header-body">
 			<div class="header-logo">
-				<img src="img/logo.png" class="logo">
-			</div>
-				 <ul class='min950'>
-					<li><a href="second-form.html">Fazer Pesquisa</a></li>
-					<li><a href="#">Test</a></li>
-					<li><a href="#">Test</a></li>
-				</ul>
-				<button class='openmenu' onClick='menu()'>
-					<img src='img/menu.png' />
-				</button>
-			<div class='max550'>
-				<button class='closemenu' onClick='menu()'>
-					<img src='img/close.png' />
-				</button>
-				<ul class='max550ul'>
-					<li><a href="#">Test</a></li>
-					<li><a href="#">Test</a></li>
-					<li><a href="#">Test</a></li>
-				</ul>
+				<img src="img/logo.png">
 			</div>
 		</div>
 	</header>
 
-	<div align=center class="cover-artigo">
+	<div class="post-content">
 		<div class="artigo">
 			<h1 style="margin-bottom: 1px; margin-top:30px;" id="postTitle"></h1>
 			<p class="dataPost" id="dataPost"></p>
@@ -123,42 +108,43 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div id="recommended">
-		<div id="degrade1"></div>
-		<div id="recommendedPosts">
-			<div class="post postRec">
-				<img src="img/teste.png">
-				<div class="coverTextsPost">
-					<h3>Blog Post #01</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa. Curabitur mattis ante nisi, vitae blandit mauris sagittis ac. 
-					</p>
+		<div id="recommended">
+			<div id="degrade1"></div>			
+			<div id="recommendedPosts">
+				<div class="post postRec">
+					<img src="img/teste.png">
+					<div class="coverTextsPost">
+						<h3>Blog Post #01</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa. Curabitur mattis ante nisi, vitae blandit mauris sagittis ac. 
+						</p>
+					</div>
 				</div>
-			</div>
-			<div class="post postRec">
-				<img src="img/teste.png">
-				<div class="coverTextsPost">
-					<h3>Blog Post #01</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa. Curabitur mattis ante nisi, vitae blandit mauris sagittis ac. 
-					</p>
+				<div class="post postRec">
+					<img src="img/teste.png">
+					<div class="coverTextsPost">
+						<h3>Blog Post #01</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa. Curabitur mattis ante nisi, vitae blandit mauris sagittis ac. 
+						</p>
+					</div>
 				</div>
-			</div>
-			<div class="post postRec">
-				<img src="img/teste.png">
-				<div class="coverTextsPost">
-					<h3>Blog Post #01</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa. Curabitur mattis ante nisi, vitae blandit mauris sagittis ac. 
-					</p>
+				<div class="post postRec">
+					<img src="img/teste.png">
+					<div class="coverTextsPost">
+						<h3>Blog Post #01</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa. Curabitur mattis ante nisi, vitae blandit mauris sagittis ac. 
+						</p>
+					</div>
 				</div>
-			</div>
+				</div>
+				<div id="degrade2"></div>
 		</div>
-		<div id="degrade2"></div>
 	</div>
 
 	<footer>
 		<div class="footer-body">
-			<img src="img/logo.png" class="logofooter">
+			<div class="footer-logo">
+				<img src="img/logo.png" class="logofooter">
+			</div>
 	 		<div>
 				<p class="footer-title">Categorias</p>
 			</div>
