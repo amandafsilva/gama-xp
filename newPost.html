@@ -29,42 +29,64 @@
 			width: 1024px;
 			margin: auto;
 		}
+
+		#post-send-btn {
+			border-radius: 30px;
+			box-shadow: 0px 3px 5px silver;
+			transition: all .5s;
+			height: 40px;
+			width: 120px;
+			color: white;
+			border: none;
+			background: #ebc70a;
+			margin-top: 30px;
+			cursor: pointer;
+		}
+		#post-send-btn:hover{
+			box-shadow: none;
+		}
 	</style>
 
 </head>
 <body>
 
 	<header>
-			<img src="img/logo.png" class="logo">
-			<ul class='min950'>
-				<li><a href="second-form.html">Fazer Pesquisa</a></li>
-				<li><a href="#">Test</a></li>
-				<li><a href="#">Test</a></li>
-			</ul>
-			<button class='openmenu' onClick='menu()'>
-				<img src='img/menu.png' />
-			</button>
-		<div class='max550'>
-			<button class='closemenu' onClick='menu()'>
-				<img src='img/close.png' />
-			</button>
-			<ul class='max550ul'>
-				<li><a href="#">Test</a></li>
-				<li><a href="#">Test</a></li>
-				<li><a href="#">Test</a></li>
-			</ul>
+		<div class="header-body">
+			<div class="header-logo">
+				<img src="img/logo.png" class="logo">
+			</div>
+				 <ul class='min950'>
+					<li><a href="second-form.html">Fazer Pesquisa</a></li>
+					<li><a href="#">Test</a></li>
+					<li><a href="#">Test</a></li>
+				</ul>
+				<button class='openmenu' onClick='menu()'>
+					<img src='img/menu.png' />
+				</button>
+			<div class='max550'>
+				<button class='closemenu' onClick='menu()'>
+					<img src='img/close.png' />
+				</button>
+				<ul class='max550ul'>
+					<li><a href="#">Test</a></li>
+					<li><a href="#">Test</a></li>
+					<li><a href="#">Test</a></li>
+				</ul>
+			</div>
 		</div>
 	</header>
 
-	<main>
 
+	<main>
 		<div id="editorPosi">
-		<h1>Classic editor</h1>
+		<h1>Faça um post</h1>
 			<form enctype="multipart/form-data" onsubmit="sendPost(event)">
 			    <textarea name="content" id="editor">
 			        
 			    </textarea>
-			    <input type="submit" name="" value="Enviar">
+			    <input type="text" name="" id="nameuserpost" placeholder="Nome do escritor">
+			    <input type="text" name="" id="categoriapost" placeholder="Categoria do Post">
+			    <input type="submit" value="Enviar" id="post-send-btn">
 			</form>
 		</div>
 

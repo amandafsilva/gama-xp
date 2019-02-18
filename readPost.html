@@ -17,12 +17,14 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-	<script defer src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
-</head>
-<body>
+	<!--<script defer src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>-->
+
 	<style>
+		.cover-artigo{
+			margin: 100px 0;
+		}
 		.artigo {
-			width: 45%;
+			width: 55%;
 			margin-top: 70px;
   			background: white;
   			box-shadow: 0px 4px 5px silver;
@@ -78,32 +80,36 @@
 		}
 	</style>
 	<script src="readPost.js"></script>
+
+</head>
+<body>
 	<header>
-			<img src="img/logo.png" class="logo" onclick="location.href='index.html';">
-			<ul class='min950'>
-				<li><a href="second-form.html">Fazer Pesquisa</a></li>
-				<li><a href="#">Test</a></li>
-				<li><a href="#">Test</a></li>
-			</ul>
-			<button class='openmenu' onClick='menu()'>
-				<img src='img/menu.png' />
-			</button>
-		<div class='max550'>
-			<button class='closemenu' onClick='menu()'>
-				<img src='img/close.png' />
-			</button>
-			<ul class='max550ul'>
-				<li><a href="#">Test</a></li>
-				<li><a href="#">Test</a></li>
-				<li><a href="#">Test</a></li>
-			</ul>
+		<div class="header-body">
+			<div class="header-logo">
+				<img src="img/logo.png" class="logo">
+			</div>
+				 <ul class='min950'>
+					<li><a href="second-form.html">Fazer Pesquisa</a></li>
+					<li><a href="#">Test</a></li>
+					<li><a href="#">Test</a></li>
+				</ul>
+				<button class='openmenu' onClick='menu()'>
+					<img src='img/menu.png' />
+				</button>
+			<div class='max550'>
+				<button class='closemenu' onClick='menu()'>
+					<img src='img/close.png' />
+				</button>
+				<ul class='max550ul'>
+					<li><a href="#">Test</a></li>
+					<li><a href="#">Test</a></li>
+					<li><a href="#">Test</a></li>
+				</ul>
+			</div>
 		</div>
 	</header>
 
-	
-		
-	</section>
-	<div align=center>
+	<div align=center class="cover-artigo">
 		<div class="artigo">
 			<h1 style="margin-bottom: 1px; margin-top:30px;" id="postTitle"></h1>
 			<p class="dataPost" id="dataPost"></p>
@@ -170,11 +176,12 @@
 	</footer>
 
 	<script type="text/javascript">
-		fetch('http://localhost:3000/post').then((resp) => {
+		let id =
+		fetch('http://localhost:3000/postId/'+id).then((resp) => {
 			if(resp.status == 200){
 				resp.json().then((e) => {
 					console.log(e)
-					document.querySelector('#texto').innerHTML = `${e[2].text}`
+					document.querySelector('#postText').innerHTML = `${e[0].text}`
 				})
 			}
 		})

@@ -111,6 +111,11 @@ header ul li a:hover {
 	width: fit-content;
 	box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.3);
 	margin-top: .5em;
+	outline-style: none;
+	text-decoration: none;
+}
+.cover-button:hover{
+	box-shadow: none;
 }
 
 #firstImg {
@@ -257,12 +262,8 @@ footer ul li a:hover {
 }
 
 .logofooter{
-<<<<<<< HEAD
   	max-width: 150px;
-  	max-height: 200px;
-=======
-  	width: 10%;
->>>>>>> a6abdce658442038468a390bf309eede0232cdd7
+  	max-height: 150px;
 }
 
 @media screen and (max-width: 1010px){
