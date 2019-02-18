@@ -161,7 +161,13 @@ footer ul li a:hover {
   display: none;
 }
 
-
+.logo{
+  width: 8%;
+  cursor: pointer;
+}
+.logofooter{
+  width:10%;
+}
 @media screen and (max-width: 550px){
  .logo{
   display: none;
