@@ -12,20 +12,34 @@ body {
 
 .posts {
 	/*margin-top: 70px;*/
-	display: flex;
-	flex-direction: row;
+  width: 100%;
+  margin-bottom: 50px;
 }
+
+#coverPost {
+  width: 850px;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .post {
-	width: 80px;
-	height: 80px;
+	width: 250px;
+	height: 400px;
 	margin-top: 30px;
 	text-align: center;
-
-
+  background: white;
+  box-shadow: 0px 4px 5px silver;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.posts img {
-	border: 20	px solid black;
+.post img {
+  width: 100%;
 }
 
 
