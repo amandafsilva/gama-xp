@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div id="texto">
+		
+	</div>
+
+
+<script type="text/javascript">
+	fetch('http://localhost:3000/post').then((resp) => {
+		if(resp.status == 200){
+			resp.json().then((e) => {
+				console.log(e)
+				document.querySelector('#texto').innerHTML = `${e[2].text}`
+			})
+		}
+	})
+</script>
+</body>
+</html>

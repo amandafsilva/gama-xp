@@ -20,6 +20,17 @@
 
 	<script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
 
+	<style type="text/css">
+		main {
+			margin: 200px 0;
+		}
+
+		#editorPosi {
+			width: 1024px;
+			margin: auto;
+		}
+	</style>
+
 </head>
 <body>
 
@@ -45,19 +56,19 @@
 		</div>
 	</header>
 
-	<div style="margin-top: 100px;">
-	<h1>Classic editor</h1>
-    <textarea name="content" id="editor">
-        &lt;p&gt;This is some sample content.&lt;/p&gt;
-    </textarea>
-    <script>
-        ClassicEditor
-            .create( document.querySelector( '#editor' ) )
-            .catch( error => {
-                console.error( error );
-            } );
-    </script>
-    </div>
+	<main>
+
+		<div id="editorPosi">
+		<h1>Classic editor</h1>
+			<form enctype="multipart/form-data" onsubmit="sendPost(event)">
+			    <textarea name="content" id="editor">
+			        
+			    </textarea>
+			    <input type="submit" name="" value="Enviar">
+			</form>
+		</div>
+
+	</main>
 
 	<footer>
 		<img src="img/logo.png">
@@ -89,6 +100,34 @@
 			}
 		}
 	</script>
+
+	<script>
+		let myEditor;
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) ).then(editor => myEditor = editor)
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+
+    <script type="text/javascript">
+    	function sendPost(e){
+    		e.preventDefault()
+
+    		fetch('http://localhost:3000/post', { method: 'post', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
+    				text: myEditor.getData()
+    			})
+    		}).then((resp) => {
+    			if(resp.status == 200){
+    				resp.json().then((r) => {
+    					alert('Cadastrado')
+    				})
+    			}else{
+    				alert('Não cadastrou')
+    			}
+    		}).catch(err => alert(err))
+    	}
+    </script>
 
 </body>
 </html>
