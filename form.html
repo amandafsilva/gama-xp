@@ -2,7 +2,7 @@
 <html>
 <head>
 
-	<title></title>
+	<title>Dataquest - Conteúdo para o sucesso do seu negócio</title>
 
 	<meta charset="utf-8">
 
@@ -18,145 +18,98 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
-	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 	<style>
+		.form-content {
+			display: flex;
+			justify-content: space-around;
+			background-image: url('img/form1-header.png');
+			background-size: cover;
+			background-position: center;
+			width: 100%;
+			flex-grow: 1;
+			padding: 1em;
+			align-items: center;
+		}
 
-  .info {
-    background-color: 	#D3D3D3;
-    width: 200px;
-    height: 410px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
-    text-align: justify;
-    border: 1px solid gray;
+		.form-box {
+			background-color: #fff;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			padding: 1em;
+			border-radius: 10px;
+		}
 
-  }
-  .form-enviar {
-  		background-color: yellow;
-  		width: 20.5%;
-  		height: 50px;
-  		border: 0;
-  		margin-top: 10px;
-  		font-size: 0.7em;
-  		border-radius: 4px;
-  		margin-bottom: 10px;
+		.input-form {
+			width: 100%;
+			height: 30px;
+			background-color: #e5e5e5;
+			border-radius: 2px;
+			padding-left: 4px;
+			font-size: 14px;
+		}
 
+		.button-form {
+			background-color: #fc7b57;
+			height: 50px;
+			border: 0;
+			margin-top: 1em;
+			padding: 1.5em;
+			font-weight: bold;
+			border: 0;
+			border-radius: 5px;
+			width: 100%;
+		}
 
+		.form-post {
+			max-width: 50%;
+		}
 
-  }
-  .botao {
-  	width: 500%;
+		h5 {
+			text-align: center;
+		}
 
+		.form-label {
+			flex-direction: column;
+			justify-content: flex-end;
+			color: #191919;
+			font-size: 0.8em;
+			margin-bottom: 20px;
+		}
 
-  }
+		.name-form {
+			margin-bottom: 1px;
+		}
 
-  .resp {
-  	width: 100%	;
-  	height: 30px;
-  }
+		.form-aviso{
+			font-size: 0.5em;
+			text-align: center;
+			color: #191919;
 
-  h5 {
-  	text-align: center;
-  }
-  .form-label {
-  	flex-direction: column;
-  	justify-content: flex-end;
-  	color: #191919;
-  	font-size: 0.8em;
-  	margin-bottom: 20px;
-  }
+		
+		}
 
-  .name-form {
-  	margin-bottom: 1px;
-  }
+		h3 {
+			padding-bottom: 10px;
+		}
+		p {
+			font-size: 0.8em;
+		}
+		input {
+			border-radius: 4px;
+			border: 0;
 
-  .form-aviso{
-  	font-size: 0.5em;
-  	text-align: center;
-  	color: #191919;
-
-  
-  }
-  .cadastro {
-  	flex-direction: row;
-  	display: flex;
-  	justify-content: center;
-    margin-top: 120px;
-  
-  }
-
-  .apresent{
-  	
-  	width: 200px;
-  	padding-top: 30px;
-  }
-
-  h3 {
-  	padding-bottom: 10px;
-  }
-  p {
-  	font-size: 0.8em;
-  }
-  input {
-  	border-radius: 4px;
-  	border: 0;
-
-  	  }
-  .form-header {
-  	width: 100%;
-  	background-color: #dcdcdc;
-  	height: 70px;
-  	display: flex;
-  	flex-direction: row;
-  	justify-content: center;
-  	flex-shrink: 0;
-  }
-.retorno
-   {
-  	  	border-bottom: 2px solid #a9a9a9;
-  	  	
-  }
+			}
+		.form-header {
+			width: 100%;
+			background-color: #dcdcdc;
+			height: 70px;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			flex-shrink: 0;
+		}
 	</style>
-
-	
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-</head>
-<body>
-	
-  <header>
-    <div class="header-body">
-      <div class="header-logo">
-        <img src="img/logo.png" class="logo">
-      </div>
-         <ul class='min950'>
-          <li><a href="second-form.html">Fazer Pesquisa</a></li>
-          <li><a href="#">Test</a></li>
-          <li><a href="#">Test</a></li>
-        </ul>
-        <button class='openmenu' onClick='menu()'>
-          <img src='img/menu.png' />
-        </button>
-      <div class='max550'>
-        <button class='closemenu' onClick='menu()'>
-          <img src='img/close.png' />
-        </button>
-        <ul class='max550ul'>
-          <li><a href="#">Test</a></li>
-          <li><a href="#">Test</a></li>
-          <li><a href="#">Test</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>          
 	<script>
 		var num1,num2;
 		document.addEventListener("DOMContentLoaded", event => {
@@ -179,52 +132,66 @@
 			});
 		});
 	</script>
-	<div class="retorno">
-		<a href="index.html">  
-		      <div class="form-header">
-		      	<img src="img/logoopinion.png" class="logo">
-		      </div>
-		</a>
+</head>
+<body>
+	<header>
+		<div class="header-body">
+			<div class="header-logo">
+				<img src="img/logo.png">
+			</div>
+				 <ul class='min950'>
+					<li><a href="second-form.html">Fazer Pesquisa</a></li>
+					<li><a href="#">Test</a></li>
+					<li><a href="#">Test</a></li>
+				</ul>
+				<button class='openmenu' onClick='menu()'>
+					<img src='img/menu.png' />
+				</button>
+			<div class='max550'>
+				<button class='closemenu' onClick='menu()'>
+					<img src='img/close.png' />
+				</button>
+				<ul class='max550ul'>
+					<li><a href="#">Test</a></li>
+					<li><a href="#">Test</a></li>
+					<li><a href="#">Test</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>    
         	
-	<div class="cadastro">
-		<div class="apresent">
+	<div class="form-content">
+		<div class="form-post">
 			<h3>Título do blog post grande pra caralho mas impactante para o usuário ler e converter </h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa.  </p>
 		</div>
-		<div class="info">
+		<div class="form-box">
 			<h5> Preencha aqui para usar o kit</h5>
 			<form>
 				<div class="name-form">
 					<label class="form-label">Nome:</label>	
-					<input type="text" name="nome" class="resp" maxlength="50" id="nome">
+					<input type="text" name="nome" class="input-form" maxlength="50" id="nome">
 				</div>
 				<div class="email-form">
 					<label class="form-label">Email: </label>
-					<input type="text" name="email" class="resp" maxlength="50" id="email">
+					<input type="text" name="email" class="input-form" maxlength="50" id="email">
 				</div>
 				<div class="empresa-form">
 					<label class="form-label">Empresa:</label>
-					<input type="text" name="empresa" class="resp" maxlength="50" id="empresa">
+					<input type="text" name="empresa" class="input-form" maxlength="50" id="empresa">
 				</div>
 				<div class="segmento-form">
 					<label class="form-label">Segmento:</label>
-					<input type="text" name="segmento" class="resp" maxlength="50" id="segmento">
+					<input type="text" name="segmento" class="input-form" maxlength="50" id="segmento">
 				</div>
 				<div class="naorobo-form">
 					<label class="form-label" id="captcha">12+4</label>
-					<input type="text" name="resultado" class="resp" maxlength="50" id="captchatext">
+					<input type="text" name="resultado" class="input-form" maxlength="50" id="captchatext">
 				</div>
-			<div class="botao">
-				<button class="form-enviar" id="receberebook"><b>QUERO RECEBER MEU E-BOOK</b></button>
-			</div>
-			<div class="form-aviso">
+				<button class="button-form" id="receberebook"><b>QUERO RECEBER MEU E-BOOK</b></button>
+				<div class="form-aviso">
                     Prometemos não utilizar suas informações de contato para enviar qualquer tipo de SPAM.
                 </div>
-
-
-
-
-
 			</form>
 		</div>
 	</div>
@@ -249,4 +216,5 @@
   </footer>
 
 </body>
+
 </html>
