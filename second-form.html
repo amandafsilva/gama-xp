@@ -20,16 +20,22 @@
         }
 
         .second-form-header {
+            width: 100%;
+            height: 30%;
+            background-image: url('img/form-header.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
             position: relative;
-            text-align: center;
+            justify-content: center;
         }
 
         .header-link {
-            position: absolute;
-            top: 0;
             color: #fff;
             text-decoration: none;
             margin-top: 1em;
+            
         }
 
         .second-form-header img {
@@ -109,9 +115,8 @@
         <script defer src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
     </head>
     <body>
-        <script src="app.js"></script>
         <div class="second-form-header">
-            <img src="img/form-header.png">
+            <!-- <a href="index.html"><img src="img/form-header.png"></a> -->
             <a href="index.html" class="header-link">home →</a>
         </div>
 

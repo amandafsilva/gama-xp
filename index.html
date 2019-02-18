@@ -49,7 +49,7 @@
 			<div class="color-overlay">
 				<div class="cover-container">
 					<span class="cover-title">Conteúdo de sucesso para o seu negócio</span>
-					<button class="cover-button">Seu sucesso agora</button>
+					<a class="cover-button" href="second-form.html">Seu sucesso agora</a>
 				</div>
 			</div>
 		</div>
@@ -58,55 +58,7 @@
 			
 			<div id="coverPost">
 	
-				<div class="post">
-					<img src="img/teste.png">
-					<div class="coverTextsPost">
-						<h3>Blog Post #01</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa. Curabitur mattis ante nisi, vitae blandit mauris sagittis ac. 
-						</p>
-					</div>
-					
-				</div>
-				<div class="post">
-					<img src="img/teste.png">
-					<div class="coverTextsPost">
-						<h3>Blog Post #01</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa. Curabitur mattis ante nisi, vitae blandit mauris sagittis ac. 
-						</p>
-					</div>
-				</div>
-				<div class="post">
-					<img src="img/teste.png">
-					<div class="coverTextsPost">
-						<h3>Blog Post #01</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa. Curabitur mattis ante nisi, vitae blandit mauris sagittis ac. 
-						</p>
-					</div>
-				</div>
-				<div class="post">
-					<img src="img/teste.png">
-					<div class="coverTextsPost">
-						<h3>Blog Post #01</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa. Curabitur mattis ante nisi, vitae blandit mauris sagittis ac. 
-						</p>
-					</div>
-				</div>
-				<div class="post">
-					<img src="img/teste.png">
-					<div class="coverTextsPost">
-						<h3>Blog Post #01</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa. Curabitur mattis ante nisi, vitae blandit mauris sagittis ac. 
-						</p>
-					</div>
-				</div>
-				<div class="post">
-					<img src="img/teste.png">
-					<div class="coverTextsPost">
-						<h3>Blog Post #01</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa. Curabitur mattis ante nisi, vitae blandit mauris sagittis ac. 
-						</p>
-					</div>
-				</div>
+				
 	
 			</div>
 	
@@ -143,6 +95,42 @@
 				menuOpen = false;
 			}
 		}
+	</script>
+
+
+	<script type="text/javascript">
+		let main = document.querySelector('#coverPost')
+		fetch('http://localhost:3000/postAll').then((resp) => {
+			if(resp.status == 200){
+				resp.json().then((e) => {
+					let posts = e.map((e) => {
+						var a = document.createElement('a')
+						a.setAttribute('href', 'readPost')
+						a.setAttribute('style', 'text-decoration: none; outline-style: none;')
+						var divpost = document.createElement('div')
+						divpost.classList.add('post')
+						divpost.setAttribute('id', e._id)
+						var img = document.createElement('img')
+						img.setAttribute('src', 'img/teste.png')
+						divpost.append(img)
+						var divtexts = document.createElement('div')
+						divtexts.classList.add('coverTextsPost')
+						var h3 = document.createElement('h3')
+						h3.innerHTML = e.titulo
+						divtexts.append(h3)
+						var p = document.createElement('p')
+						p.innerHTML = e.resumo
+						divtexts.append(p)
+						divpost.append(divtexts)
+						a.append(divpost)
+						return a
+					})
+					posts.map((e) => {main.appendChild(e)})
+				})
+			}else{
+				alert('Não foi possivel achar o post');
+			}
+		}).catch((err) => alert(err))
 	</script>
 
 </body>
