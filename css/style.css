@@ -286,6 +286,10 @@ footer ul li a:hover {
 }
 
 @media screen and (max-width: 740px){
+	.header-logo img {
+		width: 25%;
+	}
+
 	.post {
 		width: 150px;
 		height: auto;
@@ -336,6 +340,12 @@ footer ul li a:hover {
 		background: rgba(0,0,0,0.9);
 	}
 }	
+
+@media screen and (max-width: 350px){
+	.header-logo img {
+		width: 25%;
+	}
+}
 
 /* Blog */
 
