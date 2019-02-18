@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name='description' content=''>
+
+	<meta name='keywords' content=''>
+
+	<meta name='author' content='Força-Tarefa'>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+	<script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
+
+</head>
+<body>
+
+	<header>
+			<img src="img/logo.png" class="logo">
+			<ul class='min950'>
+				<li><a href="second-form.html">Fazer Pesquisa</a></li>
+				<li><a href="#">Test</a></li>
+				<li><a href="#">Test</a></li>
+			</ul>
+			<button class='openmenu' onClick='menu()'>
+				<img src='img/menu.png' />
+			</button>
+		<div class='max550'>
+			<button class='closemenu' onClick='menu()'>
+				<img src='img/close.png' />
+			</button>
+			<ul class='max550ul'>
+				<li><a href="#">Test</a></li>
+				<li><a href="#">Test</a></li>
+				<li><a href="#">Test</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div style="margin-top: 100px;">
+	<h1>Classic editor</h1>
+    <textarea name="content" id="editor">
+        &lt;p&gt;This is some sample content.&lt;/p&gt;
+    </textarea>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+    </div>
+
+	<footer>
+		<img src="img/logo.png">
+		<div>
+			<ul>
+				<li><a>Test</a></li>
+				<li><a>Test</a></li>
+				<li><a>Test</a></li>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li><a>Test</a></li>
+				<li><a>Test</a></li>
+				<li><a>Test</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<script>
+		let menuOpen = false
+		function menu(){
+			if(menuOpen == false) {
+				document.querySelector('.max550').style = 'transition: all .5s; left: 0;';
+				menuOpen = true
+			}else {
+				document.querySelector('.max550').style = 'transition: all .5s; left: -50%';
+				menuOpen = false;
+			}
+		}
+	</script>
+
+</body>
+</html>
