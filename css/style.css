@@ -193,3 +193,15 @@ header ul {
       background: rgba(0,0,0,0.9);
     }
   }	
+
+  .info {
+    background-color: gray;
+    width: 500px;
+    height: 600px;
+    margin-top: 200px;
+    margin-bottom: 30px;
+    margin-left: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
