@@ -42,19 +42,13 @@
             margin-top: 1em;
             font-size: 13px;
         }
-        .second-form-body {
-            height: calc(100vh - 150px);
-            overflow: auto;
-            display: flex;
-            flex-direction: column;
-        }
         .second-form-content {
             text-align: center;
             padding: 1em;
             display: flex;
             flex-direction: column;
             background-color: #fff;
-            flex-grow: 1;
+            flex: 1 0 auto;
             justify-content: center;
         }
         .form-inputs-container {
@@ -145,70 +139,68 @@
             </div>
         </div>
 
-        <div class="second-form-body">
-            <div class="second-form-content">
-                <h3>Cadastre-se para fazer sua pesquisa de mercado</h3>
-    
-                <div class="form-inputs-container">
-                    <div class="form-inputs-row">
-                        <div class="input-container margin-right-one">
-                            <label class="second-form-label">Nome:</label>
-                            <input type="text" class="form-input" id="nome"/>
-                        </div>
-                        <div class="input-container">
-                            <label class="second-form-label">Sobrenome:</label>
-                            <input type="text" class="form-input" id="snome"/>
-                        </div>
+        <div class="second-form-content">
+            <h3>Cadastre-se para fazer sua pesquisa de mercado</h3>
+
+            <div class="form-inputs-container">
+                <div class="form-inputs-row">
+                    <div class="input-container margin-right-one">
+                        <label class="second-form-label">Nome:</label>
+                        <input type="text" class="form-input" id="nome"/>
                     </div>
-                    <div class="form-inputs-row">
-                        <div class="input-container margin-right-one">
-                            <label class="second-form-label">Email de trabalho:</label>
-                            <input type="text" class="form-input" id="email"/>
-                        </div>
-                        <div class="input-container">
-                            <label class="second-form-label">Telefone:</label>
-                            <input type="text" class="form-input" id="tel"/>
-                        </div>
+                    <div class="input-container">
+                        <label class="second-form-label">Sobrenome:</label>
+                        <input type="text" class="form-input" id="snome"/>
                     </div>
-                    <div class="form-inputs-row">
-                        <div class="input-container margin-right-one">
-                            <label class="second-form-label">Empresa</label>
-                            <input type="text" class="form-input" id="empresa"/>
-                        </div>
-                        <div class="input-container">
-                            <label class="second-form-label">Segmento:</label>
-                            <input type="text" class="form-input" id="segmento"/>
-                        </div>
+                </div>
+                <div class="form-inputs-row">
+                    <div class="input-container margin-right-one">
+                        <label class="second-form-label">Email de trabalho:</label>
+                        <input type="text" class="form-input" id="email"/>
                     </div>
+                    <div class="input-container">
+                        <label class="second-form-label">Telefone:</label>
+                        <input type="text" class="form-input" id="tel"/>
+                    </div>
+                </div>
+                <div class="form-inputs-row">
+                    <div class="input-container margin-right-one">
+                        <label class="second-form-label">Empresa</label>
+                        <input type="text" class="form-input" id="empresa"/>
+                    </div>
+                    <div class="input-container">
+                        <label class="second-form-label">Segmento:</label>
+                        <input type="text" class="form-input" id="segmento"/>
+                    </div>
+                </div>
+
+                <button class="form-button" onclick="insertLead()">Quero receber o conteúdo</button>
+
+                <div class="form-message">
+                    Prometemos não utilizar suas informações de contato para enviar qualquer tipo de SPAM.
+                </div>
+            </div>
+        </div>
     
-                    <button class="form-button" onclick="insertLead()">Quero receber o conteúdo</button>
-    
-                    <div class="form-message">
-                        Prometemos não utilizar suas informações de contato para enviar qualquer tipo de SPAM.
+        <footer>
+            <div class="footer-body">
+                <div class="footer-logo">
+                    <img src="img/logo.png" class="logofooter">
+                </div>
+                    <div>
+                    <p class="footer-title">Categorias</p>
+                </div>
+                <div>
+                    <p class="footer-title">Siga a gente nas redes sociais</p>
+                    <div class="footer-container">
+                        <img src="img/fb-logo.png"/>
+                        <span class="footer-text">/dataquest</span>
                     </div>
                 </div>
             </div>
-        
-            <footer>
-                <div class="footer-body">
-                    <div class="footer-logo">
-                        <img src="img/logo.png" class="logofooter">
-                    </div>
-                        <div>
-                        <p class="footer-title">Categorias</p>
-                    </div>
-                    <div>
-                        <p class="footer-title">Siga a gente nas redes sociais</p>
-                        <div class="footer-container">
-                            <img src="img/fb-logo.png"/>
-                            <span class="footer-text">/dataquest</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-copyright">
-                    Dataquest © 2019. Todos os direitos reservados.
-                </div>
-            </footer>
-        </div>
+            <div class="footer-copyright">
+                Dataquest © 2019. Todos os direitos reservados.
+            </div>
+        </footer>
     </body>
 </html>
