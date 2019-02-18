@@ -45,7 +45,12 @@
 
 	<div class="main-page-body">
 		<div class="main-page-cover">
-			<img src="img/main-page-header.jpg"/>
+			<div class="color-overlay">
+				<div class="cover-container">
+					<span class="cover-title">Conteúdo de sucesso para o seu negócio</span>
+					<button class="cover-button">Seu sucesso agora</button>
+				</div>
+			</div>
 		</div>
 	
 		<div class="posts">
@@ -109,25 +114,18 @@
 
 	<footer>
 		<img src="img/logo.png" class="logofooter">
+<!-- 		<div>
+			<p class="footer-title">Categorias</p>
+		</div> -->
 		<div>
-			<ul>
-				<li><a>Test</a></li>
-				<li><a>Test</a></li>
-				<li><a>Test</a></li>
-			</ul>
-		</div>
-		<div>
-			<ul>
-				<li><a>Test</a></li>
-				<li><a>Test</a></li>
-				<li><a>Test</a></li>
-			</ul>
+			<p class="footer-title">Siga a gente nas redes sociais</p>
+			<span class="footer-text">/dataquest</span>
 		</div>
 	</footer>
 
 	<script>
 		let menuOpen = false
-		function menu(){
+		function menu() {
 			if(menuOpen == false) {
 				document.querySelector('.max550').style = 'transition: all .5s; left: 0;';
 				menuOpen = true
