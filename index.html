@@ -19,7 +19,40 @@
 </head>
 <body>
 
-	
+	<header>
+			<img src="img/logo.png" class="logo">
+			<ul class='min950'>
+				<li><a href="#">Test</a></li>
+				<li><a href="#">Test</a></li>
+				<li><a href="#">Test</a></li>
+			</ul>
+			<button class='openmenu' onClick='menu()'>
+				<img src='img/menu.png' />
+			</button>
+		<div class='max550'>
+			<button class='closemenu' onClick='menu()'>
+				<img src='img/close.png' />
+			</button>
+			<ul class='max550ul'>
+				<li><a href="#">Test</a></li>
+				<li><a href="#">Test</a></li>
+				<li><a href="#">Test</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<script>
+		let menuOpen = false
+		function menu(){
+			if(menuOpen == false) {
+				document.querySelector('.max550').style = 'left: 0';
+				menuOpen = true
+			}else {
+				document.querySelector('.max550').style = 'left: -50%';
+				menuOpen = false;
+			}
+		}
+	</script>
 
 </body>
 </html>
