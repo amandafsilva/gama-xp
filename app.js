@@ -18,9 +18,13 @@ function insertLead(){
     let ltel = document.getElementById('tel').value;
     let lempresa = document.getElementById('empresa').value;
     let lsegmento = document.getElementById('segmento').value;
-    firebase.database().ref('leads/').push({nome: lnome, snome: lsnome, email: lemail, tel: ltel, empresa: lempresa, segmento: lsegmento}, function(error){
-        if(error) alert("ERRO");
-        else alert("Email cadastrado!");
-    });
+    if(lnome === "" || lsnome === "" || lemail === "" || ltel === "" || lempresa === "" || lsegmento === ""){
+        alert("Todos os campos devem ser preenchidos!");
+    }else{
+        firebase.database().ref('leads/').push({nome: lnome, snome: lsnome, email: lemail, tel: ltel, empresa: lempresa, segmento: lsegmento}, function(error){
+            if(error) alert("ERRO");
+            else alert("Email cadastrado!");
+        });
+    }
 
 }
