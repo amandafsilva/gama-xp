@@ -278,10 +278,6 @@ footer ul li a:hover {
 		padding: 0 1em;
 	}
 
- 	.logo{
-		display: none;
-	}
-
 	.min950 {
 		display: none;
 	}
@@ -388,10 +384,6 @@ footer ul li a:hover {
 }
 
 @media screen and (max-width: 550px){
-	.logo{
-		display: none;
-	}
-
 	.min950{
 		display: none;
 	}
