@@ -118,8 +118,60 @@
 				font-size: 28px;
 			}
 		}
+		/* Banner */
+		#list-builder {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            filter: alpha(opacity=80);
+	        opacity: 0.8;
+            display: none;
+        }
+
+        #popup-box {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color:#cd77e2;
+            color: #FFFFFF;
+            width: 90%;
+            max-width: 600px;
+            padding: 30px;
+            border: 3px solid #FFFFFF;
+            border-radius: 20px;
+            text-align:center;
+            display: none;
+        }
+
+        #popup-close {
+            position: absolute;
+            top: -25px;
+            right: -25px;
+            cursor: pointer;
+            width: 40px;
+        }
+
+        #popup-box button {
+            padding: 10px;
+            border: 0px;
+            border-radius:20px;
+            background-color: #ebc70a;
+            cursor:pointer;
+            width: 30%;
+            font-weight: bold;
+        }    
+
 	</style>
 	<!-- <script src="readPost.js"></script> -->
+	<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
 
 </head>
 <body>
@@ -186,6 +238,25 @@
 	</script>
 
 	<script>
+		document.addEventListener("DOMContentLoaded", event => {
+        var delay = 10000;
+        var cookie_expire = 1;//15/(24*60);
+        var cookie = localStorage.getItem("popbanner");
+        if(cookie == undefined || cookie == null) {
+            cookie = 0;
+        }
+        if(((new Date()).getTime() - cookie) / (1000 * 60 * 60 * 24) > cookie_expire) {
+            $("#list-builder").delay(delay).fadeIn("fast", () => {
+                $("#popup-box").fadeIn("fast", () => {});
+            });
+
+            $("#popup-close").click(() => {
+                $("#list-builder, #popup-box").hide();
+                localStorage.setItem("popbanner", (new Date()).getTime());
+            });
+        }
+
+        });   
 		let menuOpen = false
 		function menu(){
 			if(menuOpen == false) {
@@ -197,6 +268,15 @@
 			}
 		}
 	</script>
-
+	<div id="list-builder"></div>
+	<div id="popup-box">
+		<img src="img/closebanner.png" id="popup-close" style="position:relative; left:54.5%; top:-40px; width:4%;"/>
+		<div id="popup-box-content">
+			<h2 style="top:-20px;position:relative;">Cadastre-se para transformar o seu negócio!</h2>
+			<form id="popup-form" action="https://email_list_service_api.com">
+				<button type="button" id="cadastrar" onclick="location.href = 'second-form.html'">Cadastrar</button>
+			</form>
+		</div>
+	</div>
 </body>
 </html>
