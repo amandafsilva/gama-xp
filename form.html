@@ -202,9 +202,7 @@
 		function bookDow(e){
 			e.preventDefault()
 
-			fetch('https://gamaexp17-1.herokuapp.com/downloadBook').then((resp) => {
-				alert('baixou')
-			}).catch(err => alert(err))
+			window.location.href = 'https://gamaexp17-1.herokuapp.com/downloadBook'
 		}
 	</script>
 </body>
