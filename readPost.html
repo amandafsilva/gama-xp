@@ -59,12 +59,12 @@
 		.descricaoPerfil{
   			color:grey;
   			font-size: 14px;
-			  margin-top:10px;
+			margin-top:10px;
 		}
 		hr{
-  			margin-top:60px;
-  			margin-bottom:10px;
-  			width:100%;
+  			margin: 3em 0;
+			width:100%;
+			border-top: 2px solid grey;
 		}
 		.keywords{
   			color: grey;
@@ -86,6 +86,26 @@
   			color: white;
   			display: block;
   			text-decoration:none;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		.post-image-container {
+			width: 100%;
+			margin-top: 2em;
+			position: relative;
+		}
+
+		.post-image-container img {
+			width: inherit;
+		}
+
+		.cover-button {
+			position: absolute;
+			left: calc(50% - 80px);
+			top: calc(50% - 50px);
 		}
 
 		@media screen and (max-width: 550px){
@@ -116,49 +136,21 @@
 			<center><h1 id="postTitle"></h1></center>
 			<p class="dataPost" id="dataPost"></p>
 			<div id="postText"></div>
+			<div class="post-image-container">
+				<a class="cover-button" href="form.html">Quero meu ebook</a>
+				<img src=""/>
+			</div>
 			<hr>
 			<div class="keywords"><p id='keywordsp'></p></div>
-			<div class="containerPerfil">
+			<!--<div class="containerPerfil">
 				<div class="containerFoto"><img src="img/profile.png" style="width:100%;"></div>
 				<div class="containerNome"><h4 id="nameEscritor"></h4>
 				<p class="descricaoPerfil"></p>
 				</div>
-			</div>
+			</div>-->
 		</div>
-		<div id="recommended">
-			<div id="degrade1"></div>			
-			<div id="recommendedPosts">
-				<div class="post postRec">
-					<img src="img/teste.png">
-					<div class="coverTextsPost">
-						<h3>Blog Post #01</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa. Curabitur mattis ante nisi, vitae blandit mauris sagittis ac. 
-						</p>
-					</div>
-				</div>
-				<div class="post postRec">
-					<img src="img/teste.png">
-					<div class="coverTextsPost">
-						<h3>Blog Post #01</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa. Curabitur mattis ante nisi, vitae blandit mauris sagittis ac. 
-						</p>
-					</div>
-				</div>
-				<div class="post postRec">
-					<img src="img/teste.png">
-					<div class="coverTextsPost">
-						<h3>Blog Post #01</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa. Curabitur mattis ante nisi, vitae blandit mauris sagittis ac. 
-						</p>
-					</div>
-				</div>
-				</div>
-				<div id="degrade2"></div>
-		</div>
-	</div>
 	</div>
 	
-
 	<footer>
 		<div class="footer-body">
 			<div class="footer-logo">
