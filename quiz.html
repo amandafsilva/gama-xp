@@ -12,9 +12,14 @@
         <link rel="stylesheet" type="text/css" href="css/quiz.css">
         <link red="canonical" href="https://dataquestbr.com.br/quiz"/>
         <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <script defer src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+        <script src="app.js"></script>
     </head>
     
     <body>
+        <script>
+            section = 'quiz';
+        </script>
         <header>
             <div class="header-body">
                 <div class="header-logo">
@@ -38,14 +43,14 @@
                 </div>
                 <div class="input-container">
                     <label class="form-label">Você é...</label>
-                    <select class="input-form">
+                    <select class="input-form" id="ocupacao">
                         <option value="empreendedor">Empreendedor</option>
                         <option value="profissionalMarketing">Profissional de Marketing</option>
                         <option value="estudante">Estudante</option>
                         <option value="consultor">Consultor</option>
                     </select>
                 </div>
-                <button class="button-form" id="receberebook"><b>INICIAR TESTE</b></button>
+                <button class="button-form" id="receberebook" onclick="insertLead()"><b>INICIAR TESTE</b></button>
             </div>
         </div>
         <footer>
