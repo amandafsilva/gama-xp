@@ -129,6 +129,7 @@
 				}else{
 					//TODO: Cadastra lead e envia ebook
 					insertLead();
+					window.location.href = 'https://gamaexp17-1.herokuapp.com/downloadBook'
 				}
 			});
 		});
@@ -172,7 +173,7 @@
 					<label class="form-label" id="captcha">12+4</label>
 					<input type="text" name="resultado" class="input-form" maxlength="50" id="captchatext">
 				</div>
-				<button class="button-form" id="receberebook" onclick="bookDow(event)"><b>QUERO RECEBER MEU E-BOOK</b></button>
+				<button class="button-form" id="receberebook"><b>QUERO RECEBER MEU E-BOOK</b></button>
 				<div class="form-aviso">
 					Fique tranquilo! Nós também não gostamos de SPAM. 
 				</div>
@@ -197,14 +198,6 @@
 			Dataquest © 2019. Todos os direitos reservados.
 		</div>
 	</footer>
-
-	<script>
-		function bookDow(e){
-			e.preventDefault()
-
-			window.location.href = 'https://gamaexp17-1.herokuapp.com/downloadBook'
-		}
-	</script>
 </body>
 
 </html>
