@@ -95,7 +95,10 @@ function insertLead(){
                 firebase.database().ref('leads/').child(emailreplace).set({nome: lnome, email: lemail, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail)}, function(error){
                 //firebase.database().ref('leads/').child(lemail).set('teste', function(error){
                     if(error) alert("ERRO: Email já cadastrado!");
-                    else alert("Email cadastrado!");
+                    else {
+                        alert("Email cadastrado!");
+                        if(section='sform') location.href = "index.html";
+                    }
                 });
             }else{
                 //QUIZ
