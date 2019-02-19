@@ -13,10 +13,10 @@ function b2cORb2b (email){
         case "globomail.com":
         case "icloud.com":
         case "me.com":
-            return "b2c";
+            return "B2C";
             break;
         default:
-            return "b2b";
+            return "B2B";
             break;
     }
 }
