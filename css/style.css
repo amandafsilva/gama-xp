@@ -269,9 +269,7 @@ footer ul li a:hover {
 }
 
 .logofooter{
-  	max-width: 150px;
-  	max-height: 150px;
-  	width: 10%;
+  	width: 12%;
 }
 
 @media screen and (max-width: 1010px){
@@ -286,6 +284,14 @@ footer ul li a:hover {
 }
 
 @media screen and (max-width: 740px){
+	.header-logo img {
+		width: 25%;
+	}
+
+	.logofooter {
+		width: 22%;
+	}
+
 	.post {
 		width: 150px;
 		height: auto;
@@ -336,6 +342,28 @@ footer ul li a:hover {
 		background: rgba(0,0,0,0.9);
 	}
 }	
+
+@media screen and (max-width: 350px){
+	.header-logo img {
+		width: 40%;
+	}
+
+	.logofooter {
+		width: 37%;
+	}
+
+	.footer-body {
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.footer-logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
 
 /* Blog */
 
