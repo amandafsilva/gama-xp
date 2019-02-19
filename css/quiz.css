@@ -11,7 +11,7 @@ header {
 .quiz-content {
     display: flex;
     justify-content: space-around;
-    background-image: url('../img/quiz-header.png');
+    background-image: url('../img/quiz-header-rapido.png');
     background-size: cover;
     background-position: center;
     flex: 1 0 auto;

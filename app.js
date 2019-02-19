@@ -1,3 +1,4 @@
+var section = 'normal';
 function b2cORb2b (email){
     var arremail = email.split("@");
     switch(arremail[1]){
@@ -90,11 +91,19 @@ function insertLead(){
     }else{
         if(validateEmail(lemail)){
             let emailreplace = lemail.replace("@","at").replace(".","dot").replace(".","dot").replace(".","dot").replace(".","dot").replace(".","dot").replace(".","dot");
-            firebase.database().ref('leads/').child(emailreplace).set({nome: lnome, email: lemail, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail)}, function(error){
-            //firebase.database().ref('leads/').child(lemail).set('teste', function(error){
-                if(error) alert("ERRO: Email já cadastrado!");
-                else alert("Email cadastrado!");
-            });
+            if(section!='quiz'){
+                firebase.database().ref('leads/').child(emailreplace).set({nome: lnome, email: lemail, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail)}, function(error){
+                //firebase.database().ref('leads/').child(lemail).set('teste', function(error){
+                    if(error) alert("ERRO: Email já cadastrado!");
+                    else alert("Email cadastrado!");
+                });
+            }else{
+                //QUIZ
+                let locupacao = document.getElementById('ocupacao').value;
+                firebase.database().ref('leads/').child(emailreplace).set({nome: lnome, email: lemail, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail), ocupacao: locupacao}, function(error){
+                    location.href = 'https://quiz.tryinteract.com/#/preview/5c6b09761db3ce0014ab10cb';
+                });
+            }
         }else alert("O email não é válido!");
     }
 

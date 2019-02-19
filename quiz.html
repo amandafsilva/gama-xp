@@ -12,13 +12,18 @@
         <link rel="stylesheet" type="text/css" href="css/quiz.css">
         <link red="canonical" href="https://dataquestbr.com.br/quiz"/>
         <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <script defer src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+        <script src="app.js"></script>
     </head>
     
     <body>
+        <script>
+            section = 'quiz';
+        </script>
         <header>
             <div class="header-body">
                 <div class="header-logo">
-                    <a href="index.html"><img alt="Logo da Dataquest" src="img/logo.png"></a>
+                    <a href="index.html"><img alt="Logo da Dataquest" src="img/logo4.png"></a>
                 </div>
             </div>
         </header>    
@@ -38,28 +43,28 @@
                 </div>
                 <div class="input-container">
                     <label class="form-label">Você é...</label>
-                    <select class="input-form">
+                    <select class="input-form" id="ocupacao">
                         <option value="empreendedor">Empreendedor</option>
                         <option value="profissionalMarketing">Profissional de Marketing</option>
                         <option value="estudante">Estudante</option>
                         <option value="consultor">Consultor</option>
                     </select>
                 </div>
-                <button class="button-form" id="receberebook"><b>INICIAR TESTE</b></button>
+                <button class="button-form" id="receberebook" onclick="insertLead()"><b>INICIAR TESTE</b></button>
             </div>
         </div>
         <footer>
             <div class="footer-body">
                 <div class="footer-logo">
-                    <img src="img/logo.png" alt="Logo da Dataquest" class="logofooter">
+                    <img src="img/logo4.png" alt="Logo da Dataquest" class="logofooter">
                 </div>
-                <div>
+                <div><a href="https://www.facebook.com/dataquestbh/" style="text-decoration: none;">
                     <p class="footer-title">Siga a nossa fanpage!</p>
                     <div class="footer-container">
                         <img alt="Logo do Facebook" src="img/fb-logo.png"/>
                         <span class="footer-text">/dataquestbh</span>
                     </div>
-                </div>
+                </a></div>
             </div>
             <div class="footer-copyright">
                 Dataquest © 2019. Todos os direitos reservados.
