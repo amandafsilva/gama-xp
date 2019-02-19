@@ -30,7 +30,7 @@
 			background-image: url('img/form1-header.png');
 			background-size: cover;
 			background-position: center;
-			flex-grow: 1;
+			flex: 1 0 auto;
 			padding: 1em;
 			align-items: center;
 		}
@@ -113,6 +113,11 @@
 			justify-content: center;
 			flex-shrink: 0;
 		}
+		@media screen and (max-width: 750px){
+            .form-content {
+                flex-wrap: wrap;
+            }
+        }
 	</style>
 	<script>
 		var num1,num2;
@@ -143,27 +148,8 @@
 			<div class="header-logo">
 				<img src="img/logo.png">
 			</div>
-				 <ul class='min950'>
-					<li><a href="second-form.html">Fazer Pesquisa</a></li>
-					<li><a href="#">Test</a></li>
-					<li><a href="#">Test</a></li>
-				</ul>
-				<button class='openmenu' onClick='menu()'>
-					<img src='img/menu.png' />
-				</button>
-			<div class='max550'>
-				<button class='closemenu' onClick='menu()'>
-					<img src='img/close.png' />
-				</button>
-				<ul class='max550ul'>
-					<li><a href="#">Test</a></li>
-					<li><a href="#">Test</a></li>
-					<li><a href="#">Test</a></li>
-				</ul>
-			</div>
 		</div>
 	</header>    
-        	
 	<div class="form-content">
 		<div class="form-post">
 			<h3>Título do blog post grande pra caralho mas impactante para o usuário ler e converter </h1>
@@ -194,31 +180,30 @@
 				</div>
 				<button class="button-form" id="receberebook"><b>QUERO RECEBER MEU E-BOOK</b></button>
 				<div class="form-aviso">
-                    Prometemos não utilizar suas informações de contato para enviar qualquer tipo de SPAM.
-                </div>
+					Prometemos não utilizar suas informações de contato para enviar qualquer tipo de SPAM.
+				</div>
 			</form>
 		</div>
 	</div>
 
 	<footer>
-    <div class="footer-body">
-      <img src="img/logo.png" class="logofooter">
-      <div>
-        <p class="footer-title">Categorias</p>
-      </div>
-      <div>
-        <p class="footer-title">Siga a gente nas redes sociais</p>
-        <div class="footer-container">
-          <img src="img/fb-logo.png"/>
-          <span class="footer-text">/dataquest</span>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      Dataquest © 2019. Todos os direitos reservados.
-    </div>
-  </footer>
-
+		<div class="footer-body">
+		<img src="img/logo.png" class="logofooter">
+		<div>
+			<p class="footer-title">Categorias</p>
+		</div>
+		<div>
+			<p class="footer-title">Siga a gente nas redes sociais</p>
+			<div class="footer-container">
+			<img src="img/fb-logo.png"/>
+			<span class="footer-text">/dataquest</span>
+			</div>
+		</div>
+		</div>
+		<div class="footer-copyright">
+		Dataquest © 2019. Todos os direitos reservados.
+		</div>
+	</footer>
 </body>
 
 </html>
