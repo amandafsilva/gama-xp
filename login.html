@@ -119,22 +119,23 @@
 
 	<div class="login">
 		<div class="dados">
-			<p class="titulo"><b>Faça login para postar</b></p>
-			<div class="email-user">
-			<label class="email-login"> Login</label>
-			<input type="text" name="email-login" maxlength="50" placeholder="voce@mail.com">
-			</div>
-			<div class="senha-user">
-				<label class="senha-login"> Senha</label>
-				<input type="password" name="senha" maxlength="50">
-			</div>
-			<div class="rec-senha">
-				<a href="rec-senha.html" class="recuperar"> Recuperar Senha</a>
-			</div>
-			<div class="enviar">
-				<input class="enviar-botao" type="submit" value="ENTRAR">
-			</div>
-			
+			<form onsubmit="login(event)">
+				<p class="titulo"><b>Faça login para postar</b></p>
+				<div class="email-user">
+				<label class="email-login"> Login</label>
+				<input type="text" name="email-login" maxlength="50" placeholder="voce@mail.com">
+				</div>
+				<div class="senha-user">
+					<label class="senha-login"> Senha</label>
+					<input type="password" name="senha" maxlength="50">
+				</div>
+				<div class="rec-senha">
+					<a href="rec-senha.html" class="recuperar"> Recuperar Senha</a>
+				</div>
+				<div class="enviar">
+					<input class="enviar-botao" type="submit" value="ENTRAR">
+				</div>
+			</form>
 		</div>
 		<div class="aviso-usuario">
 			<p> Somente os administradores podem acessar essa área</p>
@@ -157,7 +158,25 @@
 		</div>
 	</footer>
 
+	<script>
+		function login(e){
+			e.preventDefault()
 
+			fetch('https://gamaexp17-1.herokuapp.com/userLog', { method: 'post', header: { 'Content-Type': 'application/json' }, body: JSON.stringify({
+					email: document.querySelector('input[name="email-login"]').value,
+					passwd: document.querySelector('input[name="senha"]').value
+				}) 
+			}).then((resp) => {
+				if(resp.status == 200){
+					window.location.href = 'newPost.html'
+				}else{
+					resp.json().then((r) => {
+						alert(r)
+					})
+				}
+			}).catch(err => alert(err))
+		}
+	</script>
 
 </body>
 </html>
