@@ -33,7 +33,9 @@ document.addEventListener("DOMContentLoaded", event => {
         storageBucket: "show-me-the-leads.appspot.com",
         messagingSenderId: "911938446399"
       };
-    firebase.initializeApp(config);
+    if (!firebase.apps.length) {
+        firebase.initializeApp(config);
+    }
     const app = firebase.app();
 });
 var userIp;
@@ -87,7 +89,8 @@ function insertLead(){
         alert("Todos os campos devem ser preenchidos!");
     }else{
         if(validateEmail(lemail)){
-            firebase.database().ref('leads/').child(lemail.replace("@","at").replace(".","dot")).set({nome: lnome, snome: lsnome, email: lemail, empresa: lempresa, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail)}, function(error){
+            let emailreplace = lemail.replace("@","at").replace(".","dot").replace(".","dot").replace(".","dot").replace(".","dot").replace(".","dot").replace(".","dot");
+            firebase.database().ref('leads/').child(emailreplace).set({nome: lnome, snome: lsnome, email: lemail, empresa: lempresa, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail)}, function(error){
             //firebase.database().ref('leads/').child(lemail).set('teste', function(error){
                 if(error) alert("ERRO: Email já cadastrado!");
                 else alert("Email cadastrado!");
