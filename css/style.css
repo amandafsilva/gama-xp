@@ -368,7 +368,8 @@ footer ul li a:hover {
 /* Blog */
 
 .content {
-  	height: 100vh;
+	  height: auto;
+	  margin: 100px 0;
 }
 
 #recommended{
