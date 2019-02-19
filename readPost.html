@@ -100,7 +100,7 @@
 			<p class="dataPost" id="dataPost"></p>
 			<div id="postText"></div>
 			<hr>
-			<div class="keywords"><p></p></div>
+			<div class="keywords"><p id='keywordsp'></p></div>
 			<div class="containerPerfil">
 				<div class="containerFoto"><img src="img/perfil.jpg" style="width:100%;"></div>
 				<div class="containerNome"><h4 id="nameEscritor"></h4>
@@ -169,8 +169,8 @@
 					document.querySelector('#postText').innerHTML = `${e[0].text}`
 					document.querySelector('#postTitle').innerHTML = `${e[0].titulo}` 
 					document.querySelector('#nameEscritor').innerHTML = `${e[0].escritor}`
-					document.querySelector('#descricaoPerfil').innerHTML = `${e[0].escritorResumo}`
-					document.querySelector('#keywords p').innerHTML = `${e[0].tags}` 
+					document.querySelector('.descricaoPerfil').innerHTML = `${e[0].escritorResumo}`
+					document.querySelector('#keywordsp').innerHTML = `${e[0].tags}` 
 				})
 			}
 		})
