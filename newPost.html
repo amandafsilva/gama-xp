@@ -68,6 +68,8 @@
 				<input type="text" name="" id="categoriapost" placeholder="Categoria do Post">
 				<input type="text" name="" id="resumopost" placeholder="Resumo do Post">
 				<input type="text" name="" id="titulopost" placeholder="Titulo do Post">
+				<input type="text" name="" id="escritorresumopost" placeholder="Resumo sobre o Escritor">
+				<input type="text" name="" id="tagspost" placeholder="Tags: ex: marketing,hacker,tecnologia">
 			    <input type="submit" value="Enviar" id="post-send-btn">
 			</form>
 		</div>
@@ -121,7 +123,9 @@
 					escritor: document.querySelector('#nameuserpost').value,
 					categoria: document.querySelector('#categoriapost').value,
 					resumo: document.querySelector('#resumopost').value,
-					titulo: document.querySelector('#titulopost').value
+					titulo: document.querySelector('#titulopost').value,
+					escritorResumo: document.querySelector('#escritorresumopost').value,
+					tags: document.querySelector('#tagspost').value
     			})
     		}).then((resp) => {
     			if(resp.status == 200){
