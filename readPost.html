@@ -28,6 +28,12 @@
 			display: flex;
     		flex-direction: column;
 		}
+		#postTile {
+			margin-bottom: 1px; 
+			margin-top:30px; 
+			text-align: center; 
+			font-size: 40px;
+		}
 		.artigo {
 			width: 55%;
   			background: white;
@@ -81,6 +87,17 @@
   			display: block;
   			text-decoration:none;
 		}
+
+		@media screen and (max-width: 550px){
+			.artigo{
+				width: 80%;
+				padding: 0;
+			}
+
+			#postTitle {
+				font-size: 28px;
+			}
+		}
 	</style>
 	<!-- <script src="readPost.js"></script> -->
 
@@ -96,13 +113,13 @@
 
 	<div class="post-content">
 		<div class="artigo">
-			<center><h1 style="margin-bottom: 1px; margin-top:30px; text-align: center; font-size: 40px;" id="postTitle"></h1></center>
+			<center><h1 id="postTitle"></h1></center>
 			<p class="dataPost" id="dataPost"></p>
 			<div id="postText"></div>
 			<hr>
 			<div class="keywords"><p id='keywordsp'></p></div>
 			<div class="containerPerfil">
-				<div class="containerFoto"><img src="img/perfil.jpg" style="width:100%;"></div>
+				<div class="containerFoto"><img src="img/profile.png" style="width:100%;"></div>
 				<div class="containerNome"><h4 id="nameEscritor"></h4>
 				<p class="descricaoPerfil"></p>
 				</div>

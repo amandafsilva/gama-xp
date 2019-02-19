@@ -1,0 +1,21 @@
+<script>
+    function cadUser(e){
+        e.preventDefault()
+
+        fetch('https://gamaexp17-1.herokuapp.com/userCad', { method: 'post', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
+                name: document.querySelector('').value,
+                email: document.querySelector('').value,
+                passwd: document.querySelector('').value,
+                token: document.querySelector('').value
+            }) 
+        }).then((resp) => {
+            if(resp.status == 200){
+                window.location.href = 'login.html'
+            }else{
+                resp.json().then((r) => {
+                    alert(r)
+                })
+            }
+        }).catch(err => alert(err))
+    }
+</script>

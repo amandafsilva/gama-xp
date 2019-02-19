@@ -23,7 +23,6 @@
 			position: relative;
 			flex-shrink: 0;
 		}
-
 		.form-content {
 			display: flex;
 			justify-content: space-around;
@@ -34,7 +33,6 @@
 			padding: 1em;
 			align-items: center;
 		}
-
 		.form-box {
 			background-color: #fff;
 			display: flex;
@@ -43,7 +41,6 @@
 			padding: 1em;
 			border-radius: 10px;
 		}
-
 		.input-form {
 			width: 100%;
 			height: 30px;
@@ -52,7 +49,6 @@
 			padding-left: 4px;
 			font-size: 14px;
 		}
-
 		.button-form {
 			background-color: #fc7b57;
 			height: 50px;
@@ -64,15 +60,12 @@
 			border-radius: 5px;
 			width: 100%;
 		}
-
 		.form-post {
 			max-width: 50%;
 		}
-
 		h5 {
 			text-align: center;
 		}
-
 		.form-label {
 			flex-direction: column;
 			justify-content: flex-end;
@@ -80,19 +73,15 @@
 			font-size: 0.8em;
 			margin-bottom: 20px;
 		}
-
 		.name-form {
 			margin-bottom: 1px;
 		}
-
 		.form-aviso{
 			font-size: 0.5em;
 			text-align: center;
 			color: #191919;
-
 		
 		}
-
 		h3 {
 			padding-bottom: 10px;
 		}
@@ -102,7 +91,6 @@
 		input {
 			border-radius: 4px;
 			border: 0;
-
 			}
 		.form-header {
 			width: 100%;
@@ -184,7 +172,7 @@
 					<label class="form-label" id="captcha">12+4</label>
 					<input type="text" name="resultado" class="input-form" maxlength="50" id="captchatext">
 				</div>
-				<button class="button-form" id="receberebook"><b>QUERO RECEBER MEU E-BOOK</b></button>
+				<button class="button-form" id="receberebook" onclick="bookDow(event)"><b>QUERO RECEBER MEU E-BOOK</b></button>
 				<div class="form-aviso">
 					Fique tranquilo! Nós também não gostamos de SPAM. 
 				</div>
@@ -209,6 +197,16 @@
 			Dataquest © 2019. Todos os direitos reservados.
 		</div>
 	</footer>
+
+	<script>
+		function bookDow(e){
+			e.preventDefault()
+
+			fetch('https://gamaexp17-1.herokuapp.com/downloadBook').then((resp) => {
+				alert('baixou')
+			}).catch(err => alert(err))
+		}
+	</script>
 </body>
 
 </html>
