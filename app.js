@@ -79,18 +79,18 @@ getIp(function (ip) {
 
 function insertLead(){
     let lnome = document.getElementById('nome').value;
-    let lsnome = document.getElementById('snome').value;
+    //let lsnome = document.getElementById('snome').value;
     let lemail = document.getElementById('email').value;
-    let lempresa = document.getElementById('empresa').value;
+    //let lempresa = document.getElementById('empresa').value;
     let brtTime = new Date().toLocaleString("en-US", {timeZone: "America/Sao_Paulo"});
     brtTime = new Date(brtTime);
     stringTime = brtTime.getFullYear().toString() + "-" + ("0"+(brtTime.getMonth()+1)).slice(-2) + "-" + ("0" + brtTime.getDate()).slice(-2) + " " + ("0" + brtTime.getHours()).slice(-2) + ":" + ("0" + brtTime.getMinutes()).slice(-2) + ":" + ("0" + brtTime.getSeconds()).slice(-2);    
-    if(lnome === "" || lsnome === "" || lemail === "" || lempresa === ""){
+    if(lnome === "" || lemail === ""){
         alert("Todos os campos devem ser preenchidos!");
     }else{
         if(validateEmail(lemail)){
             let emailreplace = lemail.replace("@","at").replace(".","dot").replace(".","dot").replace(".","dot").replace(".","dot").replace(".","dot").replace(".","dot");
-            firebase.database().ref('leads/').child(emailreplace).set({nome: lnome, snome: lsnome, email: lemail, empresa: lempresa, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail)}, function(error){
+            firebase.database().ref('leads/').child(emailreplace).set({nome: lnome, email: lemail, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail)}, function(error){
             //firebase.database().ref('leads/').child(lemail).set('teste', function(error){
                 if(error) alert("ERRO: Email já cadastrado!");
                 else alert("Email cadastrado!");
