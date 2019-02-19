@@ -85,7 +85,9 @@
 			        
 			    </textarea>
 			    <input type="text" name="" id="nameuserpost" placeholder="Nome do escritor">
-			    <input type="text" name="" id="categoriapost" placeholder="Categoria do Post">
+				<input type="text" name="" id="categoriapost" placeholder="Categoria do Post">
+				<input type="text" name="" id="resumopost" placeholder="Resumo do Post">
+				<input type="text" name="" id="titulopost" placeholder="Titulo do Post">
 			    <input type="submit" value="Enviar" id="post-send-btn">
 			</form>
 		</div>
@@ -138,12 +140,16 @@
     		e.preventDefault()
 
     		fetch('https://gamaexp17-1.herokuapp.com/post', { method: 'post', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
-    				text: myEditor.getData()
+					text: myEditor.getData(),
+					escritor: document.querySelector('#nameuserpost').value,
+					categoria: document.querySelector('#categoriapost').value,
+					resumo: document.querySelector('#resumopost').value,
+					titulo: document.querySelector('#titulopost').value
     			})
     		}).then((resp) => {
     			if(resp.status == 200){
     				resp.json().then((r) => {
-    					alert('Cadastrado')
+						window.location.href = 'index.html';
     				})
     			}else{
     				alert('Não cadastrou')
