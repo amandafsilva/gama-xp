@@ -139,7 +139,7 @@ header ul li a:hover {
 }
 
 #coverPost {
-	width: 960px;
+	max-width: 960px;
 	height: auto;
 	margin: auto;
 	display: flex;
