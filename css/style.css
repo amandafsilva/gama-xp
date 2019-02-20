@@ -402,6 +402,22 @@ footer ul li a:hover {
 	/*.post {
 		width: 280px;
 	}*/
+
+	#copy2{
+		display:none;
+	}
+	#copy1{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 900px){
+	#copy2{
+		display:none;
+	}
+	#copy1{
+		display: none;
+	}
 }
 
 @media screen and (max-width: 740px){
@@ -418,16 +434,20 @@ footer ul li a:hover {
 	}
 
 	.quiz-button {
-		margin-top: 1.5em;
+		margin-top: 2em;
 	}
 	.cover-title{
-		font-size: 20px;
+		font-size: 24px;
 	}
 	.cover-subtitle{
-		font-size: 12px;
+		font-size: 16px;
+	}
+	.copy3{
+		width: 70%;
 	}
 	.copytitle{
-		font-size: 14px;
+		font-size: 19px;
+		text-align: center;
 	}
 	.cover-container{
 		
@@ -500,31 +520,25 @@ footer ul li a:hover {
 		width: 90%;
 	}
 	.cover-title{
-		font-size: 16px;
+		font-size: 22px;
 	}
 	.cover-subtitle{
-		font-size: 10px;
+		font-size: 16px;
 	}
 	.copytitle{
-		font-size: 16px;
+		font-size: 14px;
 	}
 	.cover-container{
 		
 	margin-left:3.75%;
 	}
 	.copy-button{
-		font-size:16px;
-		width: 40%;
+		font-size:14px;
+		width: 30%;
 	}
 	.copy{
 		width:80%;
 		margin:10px;
-	}
-	#copy2{
-		display:none;
-	}
-	#copy1{
-		display: none;
 	}
 }	
 
