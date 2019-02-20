@@ -124,8 +124,8 @@
 	<script>
 		var num1,num2;
 		document.addEventListener("DOMContentLoaded", event => {
-			num1 = Math.floor((Math.random() * 20) + 1);
-			num2 = Math.floor((Math.random() * 20) + 1);
+			num1 = Math.floor((Math.random() * 5) + 1);
+			num2 = Math.floor((Math.random() * 5) + 1);
 			document.getElementById("captcha").innerHTML = `${num1}+${num2}`;
 			document.getElementById("receberebook").addEventListener("click", e => {
 				let nome = document.getElementById("nome").value;
@@ -137,8 +137,8 @@
 				}
 				else if(document.getElementById("captchatext").value != num1+num2){
 					alert("O número digitado está incorreto!");
-					num1 = Math.floor((Math.random() * 10) + 1);
-					num2 = Math.floor((Math.random() * 10) + 1);
+					num1 = Math.floor((Math.random() * 5) + 1);
+					num2 = Math.floor((Math.random() * 5) + 1);
 					document.getElementById("captcha").innerHTML = `${num1}+${num2}`;
 				}else{
 					//TODO: Cadastra lead e envia ebook
