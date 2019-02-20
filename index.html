@@ -26,12 +26,15 @@
 
 		gtag('config', 'UA-134712503-1');
 	</script>
+
+	<script src="//unpkg.com/navigo@6"></script>
+
 </head>
 <body>
 	<header>
 		<div class="header-body">
 			<div class="header-logo">
-				<a href="index.html"><img alt="Logo da Dataquest" src="img/logo4.png"></a>
+				<a href="index.html"><img alt="Logo da Dataquest" src="img/logo.png"></a>
 			</div>
 		</div>
 	</header>
@@ -60,14 +63,13 @@
 	<footer>
 		<div class="footer-body">
 			<div class="footer-logo">
-				<img alt="Logo da Dataquest" src="img/logo4.png" class="logofooter">
+				<img alt="Logo da Dataquest" src="img/logo.png" class="logofooter">
 			</div>
-			<div><a href="https://www.facebook.com/dataquestbh/" style="text-decoration: none;">
+			<div>
 				<p class="footer-title">Siga a nossa fanpage!</p>
 				<div class="footer-container">
 					<img alt="Logo do Facebook" src="img/fb-logo.png"/>
 					<span class="footer-text">/dataquestbh</span>
-				</a>
 				</div>
 			</div>
 		</div>
@@ -105,7 +107,7 @@
 						divpost.classList.add('post')
 						divpost.setAttribute('id', e._id)
 						var img = document.createElement('img')
-						img.setAttribute('src', 'img/teste.png')
+						img.setAttribute('src', `https://gamaexp17-1.herokuapp.com/${e.caminho}${e.fotoNome}`)
 						divpost.append(img)
 						var divtexts = document.createElement('div')
 						divtexts.classList.add('coverTextsPost')
@@ -130,9 +132,9 @@
 	<script type="text/javascript">
 		function saveId(e, id){
 			e.preventDefault()
-			console.log(id)
-			sessionStorage.setItem('id', id)
-			window.location.href = 'readPost'
+			//console.log(id)
+			//sessionStorage.setItem('id', id)
+			window.location.href = 'readPost?id='+id
 		}
 	</script>
 

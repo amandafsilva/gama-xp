@@ -178,7 +178,10 @@
 	</footer>
 
 	<script type="text/javascript">
-		let id = sessionStorage.getItem('id')
+		var url_string = window.location.href
+		var url = new URL(url_string);
+		let id = url.searchParams.get("id");
+		//let id = sessionStorage.getItem('id')
 		fetch('https://gamaexp17-1.herokuapp.com/postId/'+id).then((resp) => {
 			if(resp.status == 200){
 				resp.json().then((e) => {

@@ -70,6 +70,7 @@
 				<input type="text" name="" id="titulopost" placeholder="Titulo do Post">
 				<input type="text" name="" id="escritorresumopost" placeholder="Resumo sobre o Escritor">
 				<input type="text" name="" id="tagspost" placeholder="Tags: ex: marketing,hacker,tecnologia">
+				<label>Foto Inicial</label> <input type="file" name="" id="fotopost" onchange="toB64(this)">
 			    <input type="submit" value="Enviar" id="post-send-btn">
 			</form>
 		</div>
@@ -114,7 +115,19 @@
             } );
     </script>
 
-    <script type="text/javascript">
+	<script type="text/javascript">
+		let base64 = '';
+
+		function toB64(element){
+			let file = element.files[0]
+			let reader = new FileReader()
+			reader.onloadend = function(){
+				base64 = reader.result
+				console.log(base64)
+			}
+			reader.readAsDataURL(file)
+		}
+
     	function sendPost(e){
     		e.preventDefault()
 
@@ -125,7 +138,8 @@
 					resumo: document.querySelector('#resumopost').value,
 					titulo: document.querySelector('#titulopost').value,
 					escritorResumo: document.querySelector('#escritorresumopost').value,
-					tags: document.querySelector('#tagspost').value
+					tags: document.querySelector('#tagspost').value,
+					arquivo: base64
     			})
     		}).then((resp) => {
     			if(resp.status == 200){
