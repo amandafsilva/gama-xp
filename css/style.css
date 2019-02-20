@@ -139,7 +139,6 @@ header ul li a:hover {
 }
 
 #coverPost {
-	width: 960px;
 	height: auto;
 	margin: auto;
 	display: flex;
@@ -157,7 +156,7 @@ header ul li a:hover {
 	transition: .5s;
 	cursor: pointer;
 	box-shadow: 0px 5px 5px silver;
-	margin: 50px 10px;
+	margin-top: 50px;
 }
 
 .post:hover {
