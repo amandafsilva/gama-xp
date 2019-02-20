@@ -98,14 +98,14 @@
 			if(resp.status == 200){
 				resp.json().then((e) => {
 					let posts = e.map((e) => {
+						var divpost = document.createElement('div')
+						divpost.classList.add('post')
+						divpost.setAttribute('id', e._id)
 						var a = document.createElement('a')
 						//a.setAttribute('href', 'readPost')
 						a.setAttribute('style', 'text-decoration: none; outline-style: none;')
 						a.setAttribute('id', e._id)
 						a.setAttribute('onclick', 'saveId(event, this.id)')
-						var divpost = document.createElement('div')
-						divpost.classList.add('post')
-						divpost.setAttribute('id', e._id)
 						var img = document.createElement('img')
 						img.setAttribute('src', `https://gamaexp17-1.herokuapp.com/${e.caminho}${e.fotoNome}`)
 						divpost.append(img)
