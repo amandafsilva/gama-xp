@@ -2,6 +2,18 @@
 <html>
 <head>
 
+	<script>
+		function verify(){
+			if (window.sessionStorage.length != 0) {
+
+			}else{
+				window.location.replace('https://www.dataquestbr.com.br/')
+			}
+		}
+
+		verify()
+	</script>
+
 	<title></title>
 
 	<meta charset="utf-8">
@@ -131,7 +143,7 @@
     	function sendPost(e){
     		e.preventDefault()
 
-    		fetch('https://gamaexp17-1.herokuapp.com/post', { method: 'post', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
+    		fetch('https://gamaexp17-1.herokuapp.com/authentication/post', { method: 'post', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
 					text: myEditor.getData(),
 					escritor: document.querySelector('#nameuserpost').value,
 					categoria: document.querySelector('#categoriapost').value,

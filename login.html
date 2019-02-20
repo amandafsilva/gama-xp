@@ -186,7 +186,10 @@
 				}) 
 			}).then((resp) => {
 				if(resp.status == 200){
-					window.location.href = 'newPost.html'
+					resp.json().the((r) => {
+						window.sessionStorage.setItem('token', r)
+						window.location.href = 'newPost.html'
+					})
 				}else{
 					resp.json().then((r) => {
 						alert(r)
