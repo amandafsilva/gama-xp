@@ -66,6 +66,7 @@
 			<div class="header-logo">
 				<a alt="Logo da Dataquest" href="index.html"><img src="img/logo4.png"></a>
 			</div>
+			<button onclick="deslog()">Deslogar</button>
 		</div>
 	</header>
 
@@ -76,11 +77,9 @@
 			    <textarea name="content" id="editor">
 			        
 			    </textarea>
-			    <input type="text" name="" id="nameuserpost" placeholder="Nome do escritor">
 				<input type="text" name="" id="categoriapost" placeholder="Categoria do Post">
 				<input type="text" name="" id="resumopost" placeholder="Resumo do Post">
 				<input type="text" name="" id="titulopost" placeholder="Titulo do Post">
-				<input type="text" name="" id="escritorresumopost" placeholder="Resumo sobre o Escritor">
 				<input type="text" name="" id="tagspost" placeholder="Tags: ex: marketing,hacker,tecnologia">
 				<label>Foto Inicial</label> <input type="file" name="" id="fotopost" onchange="toB64(this)">
 			    <input type="submit" value="Enviar" id="post-send-btn">
@@ -143,14 +142,13 @@
     	function sendPost(e){
     		e.preventDefault()
 
-    		fetch('https://gamaexp17-1.herokuapp.com/authentication/post', { method: 'post', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
+    		fetch('https://gamaexp17-1.herokuapp.com/authentication/post', { method: 'post', headers: { 'x-auth-token': window.sessionStorage.getItem('token'), 'Content-Type': 'application/json' }, body: JSON.stringify({
 					text: myEditor.getData(),
-					escritor: document.querySelector('#nameuserpost').value,
 					categoria: document.querySelector('#categoriapost').value,
 					resumo: document.querySelector('#resumopost').value,
 					titulo: document.querySelector('#titulopost').value,
-					escritorResumo: document.querySelector('#escritorresumopost').value,
 					tags: document.querySelector('#tagspost').value,
+					id: sessionStorage.getItem('user'),
 					arquivo: base64
     			})
     		}).then((resp) => {
@@ -163,7 +161,24 @@
     			}
     		}).catch(err => alert(err))
     	}
-    </script>
+	</script>
+	
+	<script type="text/javascript">
+		function deslog(){
+			let token = window.sessionStorage.getItem('token')
+			fetch('https://gamaexp17-1.herokuapp.com/tokendelete', { method: 'delete', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
+				token: token
+			}) }).then((resp) => {
+				if(resp.status == 200){
+					window.sessionStorage.clear();
+					window.location.replace('https://www.dataquestbr.com.br/')
+				}
+			}).catch((err) => {
+				console.log(err)
+			})
+			
+		}
+	</script>
 
 </body>
 </html>

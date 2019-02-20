@@ -74,7 +74,7 @@ header ul li a:hover {
 	background-size: cover;
 	background-position: center;
 	width: 100%;
-	height: 70vh;
+	height: 100vh;
 }
 
 .main-page-cover img {
@@ -191,14 +191,6 @@ header ul li a:hover {
 	box-shadow: none;
 	box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.3);
 	opacity: .8;
-}
-
-#firstImg {
-	width: 100%;
-	height: 100vh;
-	background-image: url('../img/main-page-header.jpg');
-	background-size: cover;
-	background-position: center;
 }
 
 .posts {

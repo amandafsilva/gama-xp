@@ -144,10 +144,10 @@
 		function cadUser(e){
 			e.preventDefault()
 	
-			fetch('https://gamaexp17-1.herokuapp.com/userCad', { method: 'post', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
-					name: document.querySelector('#nome').value,
+			fetch('https://gamaexp17-1.herokuapp.com/user', { method: 'post', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
+					nome: document.querySelector('#nome').value,
 					email: document.querySelector('#email').value,
-					passwd: document.querySelector('#senha').value,
+					senha: document.querySelector('#senha').value,
 					token: document.querySelector('#tokenCad').value
 				}) 
 			}).then((resp) => {

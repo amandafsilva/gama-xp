@@ -138,7 +138,7 @@
 	</header>
 	<div class="login">
 		<div class="box-login">
-		<form onsubmit="login(event)">
+		<form enctype="multipart/form-data" onsubmit="login(event)">
 				<p class="titulo"><b>Faça login para postar</b></p>
 				<div class="email-user">
 				<label class="label-login"> Login</label>
@@ -146,7 +146,7 @@
 				</div>
 				<div class="senha-user">
 					<label class="label-login"> Senha</label>
-					<input type="password" class="input-login" name="senha" maxlength="50">
+					<input type="password" class="input-login" name="senha" id='senha-login' maxlength="50">
 				</div>
 				<div class="rec-senha">
 					<a href="rec-senha.html" class="recuperar"> Recuperar Senha</a>
@@ -180,14 +180,15 @@
 		function login(e){
 			e.preventDefault()
 
-			fetch('https://gamaexp17-1.herokuapp.com/userLog', { method: 'post', header: { 'Content-Type': 'application/json' }, body: JSON.stringify({
+			fetch('https://gamaexp17-1.herokuapp.com/userV', { method: 'post', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
 					email: document.querySelector('input[name="email-login"]').value,
-					passwd: document.querySelector('input[name="senha"]').value
+					senha: document.querySelector('#senha-login').value
 				}) 
 			}).then((resp) => {
 				if(resp.status == 200){
-					resp.json().the((r) => {
-						window.sessionStorage.setItem('token', r)
+					resp.json().then((r) => {
+						window.sessionStorage.setItem('token', r.hash)
+						window.sessionStorage.setItem('user', r.user)
 						window.location.href = 'newPost.html'
 					})
 				}else{
