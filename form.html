@@ -180,7 +180,7 @@
 				</div>
 			</div>
 			<div class="margin-top-one">
-				<button class="button-form" id="receberebook" onclick="bookDow(event)"><b>QUERO RECEBER MEU E-BOOK</b></button>
+				<button class="button-form" id="receberebook"><b>QUERO RECEBER MEU E-BOOK</b></button>
 				<div class="form-aviso">
 					Fique tranquilo! Nós também não gostamos de SPAM. 
 				</div>
@@ -205,31 +205,6 @@
 			Dataquest © 2019. Todos os direitos reservados.
 		</div>
 	</footer>
-<<<<<<< HEAD
-=======
-
-	<script type="text/javascript">
-		let id = sessionStorage.getItem('id')
-		fetch('https://gamaexp17-1.herokuapp.com/postId/'+id).then((resp) => {
-			if(resp.status == 200){
-				resp.json().then((e) => {
-					document.querySelector('#postText').innerHTML = `${e[0].resumo}`
-					document.querySelector('#postTitle').innerHTML = `${e[0].titulo}` 
-				})
-			}
-		})
-	</script>
-
-	<script>
-		function bookDow(e){
-			e.preventDefault()
-
-			fetch('https://gamaexp17-1.herokuapp.com/downloadBook').then((resp) => {
-				alert('baixou')
-			}).catch(err => alert(err))
-		}
-	</script>
->>>>>>> 932ae06c74d5bfbc329dbf5d23d77af3c7770764
 </body>
 
 </html>
