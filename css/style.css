@@ -106,7 +106,7 @@ header ul li a:hover {
 
 .cover-button {
 	border: 0;
-	border-radius: 20px;
+	border-radius: 30px;
 	background-color: #ebc70a;
 	padding: 1em;
 	font-weight: bold;
@@ -134,24 +134,22 @@ header ul li a:hover {
 }
 
 .posts {
-	width: 100%;
-	margin-bottom: 50px;
+	width: 90%;
+    margin: 0 auto 50px;
 }
 
 #coverPost {
-	width: 70%;
 	height: auto;
 	margin: auto;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 .post {
 	width: 300px;
 	height: 400px;
-	margin-top: 30px;
 	background: white;
 	display: flex;
 	flex-direction: column;
@@ -159,6 +157,7 @@ header ul li a:hover {
 	transition: .5s;
 	cursor: pointer;
 	box-shadow: 0px 5px 5px silver;
+	margin-top: 50px;
 }
 
 .post:hover {

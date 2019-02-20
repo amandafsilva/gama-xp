@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Dataquest - Conteúdo para o sucesso do seu negócio</title>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name='description' content='Conteúdo para o sucesso do seu negócio'>
+
+	<meta name='keywords' content='dados data startup empresa pesquisa mercado blog dataquest dataquestbr quest'>
+
+	<meta name='author' content='Força-Tarefa'>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+	<style>
+		header {
+			position: relative;
+			flex-shrink: 0;
+		}
+
+		.cadastro-content {
+
+			display: flex;
+			justify-content: space-around;
+			background-image: #fff;
+			background-size: cover;
+			background-position: center;
+			flex: 1 0 auto;
+			padding: 1em;
+			align-items: center;
+		}
+
+		.cadastro-box {
+			background-color: #e5e5e5;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			padding: 1em;
+			border-radius: 10px;
+		}
+		.input-cadastro {
+			width: 100%;
+			height: 30px;
+			background-color: #fff;
+			border-radius: 2px;
+			padding-left: 4px;
+			font-size: 14px;
+			border: 0;
+		}
+		.cadastro-label{
+    		flex-direction: column;
+    		justify-content: flex-end;
+    		color: #191919;
+    		font-size: 0.8em;
+    		margin-bottom: 20px;
+		}
+		.select-cadastro {
+			width: 100%;
+			border-radius: 2px;
+			height: 30px;
+			background-color: #fff;
+		}
+		.button-cadastro {
+			background-color: #60d760;
+			height: 50px;
+			border: 0;
+			margin-top: 1em;
+			padding: 1.5em;
+			font-weight: bold;
+			border: 0;
+			border-radius: 5px;
+			width: 100%;
+		}
+		h4 {
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<div class="header-body">
+			<div class="header-logo">
+				<a href="index.html"><img alt="Logo da Dataquest" src="img/logo4.png"></a>
+			</div>
+		</div>
+	</header>
+	<div class="cadastro-content">
+		<div class="cadastro-box">
+			<h4>Faça seu cadastro para postar</h4>
+			<div class="name-cadastro">
+				<label class="cadastro-label">Nome:</label>	
+				<input type="text" name="nome" class="input-cadastro" maxlength="40" id="nome">
+			</div>
+			<div class="stack-cadastro">
+				<label class="cadastro-label">Stack: </label>
+				<select name="stack" class="select-cadastro">
+					<option class="opt-stack">Hacker</option>
+					<option class="opt-stack">Hipster</option>
+					<option class="opt-stack">Hustler</option>
+					<option class="opt-stack">Hyper</option>
+				</select>
+			</div>
+			<div class="email-cadastro">
+				<label class="cadastro-label">Email: </label>
+				<input type="text" name="email" class="input-cadastro" maxlength="40" id="email">
+			</div>
+			
+			<div class="senha-cadastro">
+				<label class="cadastro-label">Senha:</label>	
+				<input type="password" name="senha" class="input-cadastro" maxlength="40" id="senha">
+			</div>
+			<div class="confirm-senha-cadastro">
+				<label class="cadastro-label">Confirmar senha:</label>	
+				<input type="password" name="senhaconfirm" class="input-cadastro" maxlength="40" id="senhaconfirm">
+			<button class="button-cadastro" id="criarcadastro" onclick="bookDow(event)"><b>ENTRAR</b></button>
+			</div>
+					
+			</div>
+			
+		</div>
+
+		
+	</div>   
+	<footer>
+		<div class="footer-body">
+			<div class="footer-logo">
+				<img src="img/logo4.png" alt="Logo da Dataquest" class="logofooter">
+			</div>
+			<div><a href="https://www.facebook.com/dataquestbh/" style="text-decoration: none;">
+				<p class="footer-title">Siga a nossa fanpage!</p>
+				<div class="footer-container">
+					<img alt="Logo do Facebook" src="img/fb-logo.png"/>
+					<span class="footer-text">/dataquestbh</span>
+				</div>
+			</a></div>
+		</div>
+		<div class="footer-copyright">
+			Dataquest © 2019. Todos os direitos reservados.
+		</div>
+	</footer>
+
+
+</body>
+</html>

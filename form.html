@@ -25,12 +25,12 @@
 		}
 		.form-content {
 			display: flex;
-			justify-content: space-around;
+			justify-content: space-evenly;
 			background-image: url('img/form1-header.jpg');
 			background-size: cover;
 			background-position: center;
 			flex: 1 0 auto;
-			padding: 1em;
+			padding: 3em 1em;
 			align-items: center;
 		}
 		.form-box {
@@ -40,6 +40,7 @@
 			justify-content: flex-start;
 			padding: 1em;
 			border-radius: 10px;
+    		justify-content: space-between;
 		}
 		.input-form {
 			width: 100%;
@@ -61,7 +62,8 @@
 			width: 100%;
 		}
 		.form-post {
-			max-width: 50%;
+			max-width: 40%;
+			align-self: flex-start;
 		}
 		h5 {
 			text-align: center;
@@ -77,10 +79,9 @@
 			margin-bottom: 1px;
 		}
 		.form-aviso{
-			font-size: 0.5em;
+			font-size: 10px;
 			text-align: center;
 			color: #191919;
-		
 		}
 		h3 {
 			padding-bottom: 10px;
@@ -100,6 +101,13 @@
 			flex-direction: row;
 			justify-content: center;
 			flex-shrink: 0;
+		}
+		.margin-top-one {
+			margin-top: 1em;
+		}
+
+		#postText {
+			font-size: 15px;
 		}
 		@media screen and (max-width: 750px){
             .form-content {
@@ -147,37 +155,36 @@
 	</header>    
 	<div class="form-content">
 		<div class="form-post">
-			<h3>Título do blog post grande pra caralho mas impactante para o usuário ler e converter </h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa.  </p>
+			<h2 id="postTitle"></h2>
+			<br/>
+			<p id="postText"></p>
 		</div>
 		<div class="form-box">
 			<h5> Preencha aqui para usar o kit</h5>
-			<!--<form>-->
+			<div class="margin-top-one">
 				<div class="name-form">
 					<label class="form-label">Nome:</label>	
 					<input type="text" name="nome" class="input-form" maxlength="50" id="nome">
+				</div>
+				<div class="name-form">
+					<label class="form-label">Sobrenome:</label>	
+					<input type="text" name="nome" class="input-form" maxlength="80" id="snome">
 				</div>
 				<div class="email-form">
 					<label class="form-label">Email: </label>
 					<input type="text" name="email" class="input-form" maxlength="50" id="email">
 				</div>
-				<!--<div class="empresa-form">
-					<label class="form-label">Empresa:</label>
-					<input type="text" name="empresa" class="input-form" maxlength="50" id="empresa">
-				</div>
-				<div class="segmento-form">
-					<label class="form-label">Segmento:</label>
-					<input type="text" name="segmento" class="input-form" maxlength="50" id="segmento">
-				</div>-->
 				<div class="naorobo-form">
 					<label class="form-label" id="captcha">12+4</label>
 					<input type="text" name="resultado" class="input-form" maxlength="50" id="captchatext">
 				</div>
-				<button class="button-form" id="receberebook"><b>QUERO RECEBER MEU E-BOOK</b></button>
+			</div>
+			<div class="margin-top-one">
+				<button class="button-form" id="receberebook" onclick="bookDow(event)"><b>QUERO RECEBER MEU E-BOOK</b></button>
 				<div class="form-aviso">
 					Fique tranquilo! Nós também não gostamos de SPAM. 
 				</div>
-			<!--</form>-->
+			</div>
 		</div>
 	</div>
 
@@ -198,6 +205,31 @@
 			Dataquest © 2019. Todos os direitos reservados.
 		</div>
 	</footer>
+<<<<<<< HEAD
+=======
+
+	<script type="text/javascript">
+		let id = sessionStorage.getItem('id')
+		fetch('https://gamaexp17-1.herokuapp.com/postId/'+id).then((resp) => {
+			if(resp.status == 200){
+				resp.json().then((e) => {
+					document.querySelector('#postText').innerHTML = `${e[0].resumo}`
+					document.querySelector('#postTitle').innerHTML = `${e[0].titulo}` 
+				})
+			}
+		})
+	</script>
+
+	<script>
+		function bookDow(e){
+			e.preventDefault()
+
+			fetch('https://gamaexp17-1.herokuapp.com/downloadBook').then((resp) => {
+				alert('baixou')
+			}).catch(err => alert(err))
+		}
+	</script>
+>>>>>>> 932ae06c74d5bfbc329dbf5d23d77af3c7770764
 </body>
 
 </html>

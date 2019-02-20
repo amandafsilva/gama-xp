@@ -59,12 +59,12 @@
 		.descricaoPerfil{
   			color:grey;
   			font-size: 14px;
-			  margin-top:10px;
+			margin-top:10px;
 		}
 		hr{
-  			margin-top:60px;
-  			margin-bottom:10px;
-  			width:100%;
+  			margin: 3em 0;
+			width:100%;
+			border-top: 2px solid grey;
 		}
 		.keywords{
   			color: grey;
@@ -88,6 +88,26 @@
   			text-decoration:none;
 		}
 
+		ul {
+			list-style: none;
+		}
+
+		.post-image-container {
+			width: 100%;
+			margin-top: 2em;
+			position: relative;
+		}
+
+		.post-image-container img {
+			width: inherit;
+		}
+
+		.cover-button {
+			position: absolute;
+			left: calc(50% - 80px);
+			top: calc(50% - 50px);
+		}
+
 		@media screen and (max-width: 550px){
 			.artigo{
 				width: 80%;
@@ -98,8 +118,60 @@
 				font-size: 28px;
 			}
 		}
+		/* Banner */
+		#list-builder {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            filter: alpha(opacity=80);
+	        opacity: 0.8;
+            display: none;
+        }
+
+        #popup-box {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color:#cd77e2;
+            color: #FFFFFF;
+            width: 90%;
+            max-width: 600px;
+            padding: 30px;
+            border: 3px solid #FFFFFF;
+            border-radius: 20px;
+            text-align:center;
+            display: none;
+        }
+
+        #popup-close {
+            position: absolute;
+            top: -25px;
+            right: -25px;
+            cursor: pointer;
+            width: 40px;
+        }
+
+        #popup-box button {
+            padding: 10px;
+            border: 0px;
+            border-radius:20px;
+            background-color: #ebc70a;
+            cursor:pointer;
+            width: 30%;
+            font-weight: bold;
+        }    
+
 	</style>
 	<!-- <script src="readPost.js"></script> -->
+	<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
 
 </head>
 <body>
@@ -116,49 +188,21 @@
 			<center><h1 id="postTitle"></h1></center>
 			<p class="dataPost" id="dataPost"></p>
 			<div id="postText"></div>
+			<div class="post-image-container">
+				<a class="cover-button" href="form.html">Quero meu ebook</a>
+				<img src=""/>
+			</div>
 			<hr>
 			<div class="keywords"><p id='keywordsp'></p></div>
-			<div class="containerPerfil">
+			<!--<div class="containerPerfil">
 				<div class="containerFoto"><img src="img/profile.png" style="width:100%;"></div>
 				<div class="containerNome"><h4 id="nameEscritor"></h4>
 				<p class="descricaoPerfil"></p>
 				</div>
-			</div>
+			</div>-->
 		</div>
-		<div id="recommended">
-			<div id="degrade1"></div>			
-			<div id="recommendedPosts">
-				<div class="post postRec">
-					<img src="img/teste.png">
-					<div class="coverTextsPost">
-						<h3>Blog Post #01</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa. Curabitur mattis ante nisi, vitae blandit mauris sagittis ac. 
-						</p>
-					</div>
-				</div>
-				<div class="post postRec">
-					<img src="img/teste.png">
-					<div class="coverTextsPost">
-						<h3>Blog Post #01</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa. Curabitur mattis ante nisi, vitae blandit mauris sagittis ac. 
-						</p>
-					</div>
-				</div>
-				<div class="post postRec">
-					<img src="img/teste.png">
-					<div class="coverTextsPost">
-						<h3>Blog Post #01</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a tortor justo. Donec erat enim, egestas vel velit eget, luctus ullamcorper massa. Curabitur mattis ante nisi, vitae blandit mauris sagittis ac. 
-						</p>
-					</div>
-				</div>
-				</div>
-				<div id="degrade2"></div>
-		</div>
-	</div>
 	</div>
 	
-
 	<footer>
 		<div class="footer-body">
 			<div class="footer-logo">
@@ -197,6 +241,25 @@
 	</script>
 
 	<script>
+		document.addEventListener("DOMContentLoaded", event => {
+        var delay = 10000;
+        var cookie_expire = 1;//15/(24*60);
+        var cookie = localStorage.getItem("popbanner");
+        if(cookie == undefined || cookie == null) {
+            cookie = 0;
+        }
+        if(((new Date()).getTime() - cookie) / (1000 * 60 * 60 * 24) > cookie_expire) {
+            $("#list-builder").delay(delay).fadeIn("fast", () => {
+                $("#popup-box").fadeIn("fast", () => {});
+            });
+
+            $("#popup-close").click(() => {
+                $("#list-builder, #popup-box").hide();
+                localStorage.setItem("popbanner", (new Date()).getTime());
+            });
+        }
+
+        });   
 		let menuOpen = false
 		function menu(){
 			if(menuOpen == false) {
@@ -208,6 +271,15 @@
 			}
 		}
 	</script>
-
+	<div id="list-builder"></div>
+	<div id="popup-box">
+		<img src="img/closebanner.png" id="popup-close" style="position:relative; left:54.5%; top:-40px; width:4%;"/>
+		<div id="popup-box-content">
+			<h2 style="top:-20px;position:relative;">Cadastre-se para transformar o seu negócio!</h2>
+			<form id="popup-form" action="https://email_list_service_api.com">
+				<button type="button" id="cadastrar" onclick="location.href = 'form.html'">Cadastrar</button>
+			</form>
+		</div>
+	</div>
 </body>
 </html>
