@@ -15,7 +15,7 @@
 	<meta name='author' content='Força-Tarefa'>
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 
 	<style>
@@ -150,7 +150,8 @@
             border: 3px solid #FFFFFF;
             border-radius: 20px;
             text-align:center;
-            display: none;
+			display: none;
+			z-index: 5;
         }
 
         #popup-close {
@@ -212,13 +213,23 @@
 			<div class="footer-logo">
 				<img alt="Logo da Dataquest" src="img/logo4.png" class="logofooter">
 			</div>
-			<div><a href="https://www.facebook.com/dataquestbh/" style="text-decoration: none;">
-				<p class="footer-title">Siga a nossa fanpage!</p>
-				<div class="footer-container">
-					<img alt="Logo do Facebook" src="img/fb-logo.png"/>
-					<span class="footer-text">/dataquestbh</span>
+			<div class="lista-redes">
+				<div class="margin-right-one">
+					<a href="https://www.facebook.com/dataquestbh" target="_blank" title="Facebook">
+						<i class="fab fa-facebook"></i>
+					</a>
 				</div>
-			</a></div>
+				<div class="margin-right-one"> 
+					<a href="https://www.linkedin.com/in/data-quest/" target="_blank" title="LinkedIn">
+						<i class="fab fa-linkedin"></i>
+					</a>
+				</div>
+				<div>
+					<a href="https://www.instagram.com/dataquestbr" title="Instagram">
+						<i class="fab fa-instagram"></i>
+					</a>
+				</div>
+			</div>
 		</div>
 		<div class="footer-copyright">
 			Dataquest © 2019. Todos os direitos reservados.
@@ -279,9 +290,9 @@
 	<div id="popup-box">
 		<img src="img/closebanner.png" id="popup-close" style="position:relative; left:54.5%; top:-40px; width:4%; display:none;"/>
 		<div id="popup-box-content">
-			<h2 style="top:-20px;position:relative;">Cadastre-se para transformar o seu negócio!</h2>
+			<h2 style="top:-20px;position:relative;">Quer mudar o seu negócio pra melhor?</h2>
 			<form id="popup-form" action="https://email_list_service_api.com">
-				<button type="button" id="cadastrar" onclick="location.href = 'form.html'">Cadastrar</button>
+				<button type="button" id="cadastrar" onclick="location.href = 'form.html'">Assine a nossa newsletter</button>
 			</form>
 		</div>
 	</div>

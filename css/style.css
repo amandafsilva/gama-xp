@@ -380,6 +380,19 @@ footer ul li a:hover {
 	font-size: 24px;
 }
 
+.lista-redes {
+	display: flex;
+}
+
+.lista-redes i {
+	color: #fff;
+	font-size: 30px;
+}
+
+.margin-right-one {
+	margin-right: 1em;
+}
+
 @media screen and (max-width: 1010px){
 	.header-body,
 	.footer-body {
@@ -471,6 +484,18 @@ footer ul li a:hover {
 		background: rgba(0,0,0,0.9);
 	}
 
+	.quiz-title {
+		width: 75%;
+	}
+
+	.quiz-container h2 {
+		font-size: 40px;
+	}
+
+	.quiz-container h3 {
+		font-size: 20px;
+	}
+
 	#coverPost {
 		width: 90%;
 	}
@@ -515,10 +540,6 @@ footer ul li a:hover {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	}
-
-	.quiz-title {
-		width: 75%;
 	}
 }
 
