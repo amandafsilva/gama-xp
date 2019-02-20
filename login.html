@@ -20,74 +20,94 @@
 
 	<style>
 
+		header {
+			position: relative;
+			flex-shrink: 0;
+		}
 		.login {
-			margin-top: 100px;
-			justify-content: center;
-			flex-direction: column;
 			display: flex;
-			width: 100%;
-			height: 500px;
+			justify-content: center;
+			background-color: #fff;
+			background-size: cover;
+			background-position: center;
+			flex: 1 0 auto;
+			padding: 1em;
 			align-items: center;
-		}
-		.dados {
-			background-color: #dcdcdc;
-			height: 57%;
-			width: 25%;
-			padding-right: 25px;
-			padding-left: 25px;
-			padding-top: 20px;
-			border-radius: 4px;
-
-
+			flex-direction: column;
 
 		}
-		.dados label {
-			padding-left: 10px;
+
+		.box-login {
+
+			background-color: #e5e5e5;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			padding: 1em;
+			border-radius: 10px;
+			flex-wrap: nowrap;
+			padding-bottom: 25px;
+		}
+		.button-login {
+			background-color: #60d760;
+			height: 50px;
+			border: 0;
+			margin-top: 1em;
+			padding: 1.5em;
+			font-weight: bold;
+			border: 0;
+			border-radius: 5px;
+			width: 50%;
+			color: #fff;
+			text-align: center;
+
+
+		}
+
+		.enviar {
+			text-align: center;
+		}
+		.input-login {
+			width: 100%;
+			height: 30px;
+			background-color: #fff;
+			border-radius: 2px;
+			padding-left: 4px;
+			font-size: 14px;
+			border: 0;
+
 		}
 
 		.email-user, .senha-user{
-			font-size: 0.8em;
-			padding-top: 20px;
-			color: #4d4d4d;
+			padding-top: 15px;
 		}
+		.label-login{
+    		flex-direction: column;
+    		justify-content: flex-end;
+    		color: #191919;
+    		font-size: 0.8em;
+    		margin-bottom: 20px;
 
-		.email-user input, .senha-user input {
-			width: 100%;
-			height: 40px;
-			border-radius: 4px;
-			border: 0;
-			padding-left: 10px;
-			
 		}
-
-		.titulo, .rec-senha, .enviar {
-			text-align: center;
-		}
-
-		.enviar-botao {
-			background-color: #60d760;
-			border: 0;
-			border-radius: 20px;
-			width: 100px;
-			height: 35px;
+		.aviso {
+			font-size: 0.6em;
+			color: #191919;
 			margin-top: 10px;
-			align-self: center;
-			color: #fff;
 		}
-		.titulo {
-			font-size: 1.1em;
-		}
-
 		.recuperar {
 			font-size: 0.6em;
-			color: dimgray;
+			color: #191919;
+			
+
 		}
-		.aviso-usuario {
-			font-size: 0.5em;
-			width: 200px;
+		.rec-senha {
 			text-align: center;
-			margin-top: 20px;
 		}
+
+		.titulo {
+			text-align: center;
+		}
+
 	</style>
 </head>
 <body>
@@ -116,30 +136,28 @@
 			</div>
 		</div>
 	</header>
-
 	<div class="login">
-		<div class="dados">
-			<form onsubmit="login(event)">
+		<div class="box-login">
+		<form onsubmit="login(event)">
 				<p class="titulo"><b>Faça login para postar</b></p>
 				<div class="email-user">
-				<label class="email-login"> Login</label>
-				<input type="text" name="email-login" maxlength="50" placeholder="voce@mail.com">
+				<label class="label-login"> Login</label>
+				<input type="text" name="email-login" maxlength="50" class="input-login" placeholder="voce@mail.com">
 				</div>
 				<div class="senha-user">
-					<label class="senha-login"> Senha</label>
-					<input type="password" name="senha" maxlength="50">
+					<label class="label-login"> Senha</label>
+					<input type="password" class="input-login" name="senha" maxlength="50">
 				</div>
 				<div class="rec-senha">
 					<a href="rec-senha.html" class="recuperar"> Recuperar Senha</a>
 				</div>
 				<div class="enviar">
-					<input class="enviar-botao" type="submit" value="ENTRAR">
+					<button class="button-login" id="criarcadastro" onclick="bookDow(event)"><b>ENTRAR</b></button>
+					
 				</div>
 			</form>
 		</div>
-		<div class="aviso-usuario">
-			<p> Somente os administradores podem acessar essa área</p>
-		</div>
+		<div class="aviso">Somente os administradores podem acessar essa área</div>
 	</div>
 
 	<footer>
