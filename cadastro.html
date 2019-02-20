@@ -98,7 +98,6 @@
 				<label class="cadastro-label">Nome:</label>	
 				<input type="text" name="nome" class="input-cadastro" maxlength="40" id="nome">
 			</div>
-			</div>
 			<div class="email-cadastro">
 				<label class="cadastro-label">Email: </label>
 				<input type="text" name="email" class="input-cadastro" maxlength="40" id="email">
@@ -111,8 +110,6 @@
 			<div class="confirm-senha-cadastro">
 				<label class="cadastro-label">Confirmar senha:</label>	
 				<input type="password" name="senhaconfirm" class="input-cadastro" maxlength="40" id="senhaconfirm">
-			</div>
-			<div class="confirm-senha-cadastro">
 				<label class="cadastro-label">Token</label>	
 				<input type="text" class="input-cadastro" id="tokenCad">
 			<button class="button-cadastro" id="criarcadastro" onclick="cadUser(event)"><b>ENTRAR</b></button>
@@ -151,7 +148,7 @@
 					name: document.querySelector('#nome').value,
 					email: document.querySelector('#email').value,
 					passwd: document.querySelector('#senha').value,
-					token: document.querySelector('#token').value
+					token: document.querySelector('#tokenCad').value
 				}) 
 			}).then((resp) => {
 				if(resp.status == 200){
