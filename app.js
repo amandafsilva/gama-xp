@@ -104,7 +104,8 @@ function insertLead(){
                 //QUIZ
                 let locupacao = document.getElementById('ocupacao').value;
                 firebase.database().ref('leads/').child(emailreplace).set({nome: lnome, email: lemail, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail), ocupacao: locupacao}, function(error){
-                    location.href = 'https://quiz.tryinteract.com/#/preview/5c6b09761db3ce0014ab10cb';
+                    location.target = "_blank"
+                    location.href = 'https://quiz.tryinteract.com/#/5c6b09761db3ce0014ab10cb';
                 });
             }
         }else alert("O email não é válido!");

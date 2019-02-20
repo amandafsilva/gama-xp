@@ -199,7 +199,7 @@
 			</div>
 			<div class="keywords"><p id='keywordsp'></p></div>
 			<!--<div class="containerPerfil">
-				<div class="containerFoto"><img src="img/profile.png" style="width:100%;"></div>
+				<div class="containerFoto"><img id='fotoEscritor' style="width:100%;"></div>
 				<div class="containerNome"><h4 id="nameEscritor"></h4>
 				<p class="descricaoPerfil"></p>
 				</div>
@@ -230,15 +230,15 @@
 		var url = new URL(url_string);
 		let id = url.searchParams.get("id");
 
+		let escritorId = ''
+
 		fetch('https://gamaexp17-1.herokuapp.com/postId/'+id).then((resp) => {
 			if(resp.status == 200){
 				resp.json().then((e) => {
 					console.log(e)
 					document.querySelector('#postText').innerHTML = `${e[0].text}`
 					document.querySelector('#postTitle').innerHTML = `${e[0].titulo}` 
-					document.querySelector('#nameEscritor').innerHTML = `${e[0].escritor}`
-					document.querySelector('.descricaoPerfil').innerHTML = `${e[0].escritorResumo}`
-					document.querySelector('#keywordsp').innerHTML = `${e[0].tags}` 
+					document.querySelector('#keywordsp').innerHTML = `${e[0].tags}`
 				})
 			}
 		})
