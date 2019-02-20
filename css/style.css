@@ -153,7 +153,6 @@ header ul li a:hover {
 	background: white;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
 	transition: .5s;
 	cursor: pointer;
 	box-shadow: 0px 5px 5px silver;
@@ -171,8 +170,7 @@ header ul li a:hover {
 
 .coverTextsPost {
 	width: 90%;
-	height: 40%;
-	margin: auto;
+	margin: 1em auto;
 	display: flex;
 	flex-direction: column;
 }
