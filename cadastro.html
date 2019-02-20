@@ -98,14 +98,6 @@
 				<label class="cadastro-label">Nome:</label>	
 				<input type="text" name="nome" class="input-cadastro" maxlength="40" id="nome">
 			</div>
-			<div class="stack-cadastro">
-				<label class="cadastro-label">Stack: </label>
-				<select name="stack" class="select-cadastro">
-					<option class="opt-stack">Hacker</option>
-					<option class="opt-stack">Hipster</option>
-					<option class="opt-stack">Hustler</option>
-					<option class="opt-stack">Hyper</option>
-				</select>
 			</div>
 			<div class="email-cadastro">
 				<label class="cadastro-label">Email: </label>
@@ -119,7 +111,11 @@
 			<div class="confirm-senha-cadastro">
 				<label class="cadastro-label">Confirmar senha:</label>	
 				<input type="password" name="senhaconfirm" class="input-cadastro" maxlength="40" id="senhaconfirm">
-			<button class="button-cadastro" id="criarcadastro" onclick="bookDow(event)"><b>ENTRAR</b></button>
+			</div>
+			<div class="confirm-senha-cadastro">
+				<label class="cadastro-label">Token</label>	
+				<input type="text" class="input-cadastro" id="tokenCad">
+			<button class="button-cadastro" id="criarcadastro" onclick="cadUser(event)"><b>ENTRAR</b></button>
 			</div>
 					
 			</div>
@@ -146,6 +142,28 @@
 		</div>
 	</footer>
 
+
+	<script>
+		function cadUser(e){
+			e.preventDefault()
+	
+			fetch('https://gamaexp17-1.herokuapp.com/userCad', { method: 'post', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
+					name: document.querySelector('#nome').value,
+					email: document.querySelector('#email').value,
+					passwd: document.querySelector('#senha').value,
+					token: document.querySelector('#token').value
+				}) 
+			}).then((resp) => {
+				if(resp.status == 200){
+					window.location.href = 'login.html'
+				}else{
+					resp.json().then((r) => {
+						alert(r)
+					})
+				}
+			}).catch(err => alert(err))
+		}
+	</script>
 
 </body>
 </html>
