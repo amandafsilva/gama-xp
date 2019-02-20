@@ -38,6 +38,7 @@
 			flex: 1 0 auto;
 			padding: 3em 1em;
 			align-items: center;
+			
 		}
 		.form-box {
 			background-color: #fff;
@@ -47,6 +48,7 @@
 			padding: 1em;
 			border-radius: 10px;
     		justify-content: space-between;
+    		max-width: 200px;
 		}
 		.input-form {
 			width: 100%;
@@ -61,18 +63,18 @@
 			height: 50px;
 			border: 0;
 			margin-top: 1em;
-			padding: 1.5em;
 			font-weight: bold;
 			border: 0;
 			border-radius: 5px;
 			width: 100%;
 		}
 		.form-post {
-			max-width: 40%;
+			max-width: 200px;
 			align-self: flex-start;
 		}
 		h5 {
 			text-align: center;
+			
 		}
 		.form-label {
 			flex-direction: column;
@@ -89,12 +91,8 @@
 			text-align: center;
 			color: #191919;
 		}
-		h3 {
-			padding-bottom: 10px;
-		}
-		p {
-			font-size: 0.8em;
-		}
+		
+		
 		input {
 			border-radius: 4px;
 			border: 0;
@@ -112,14 +110,18 @@
 			margin-top: 1em;
 		}
 
-		#postText {
-			font-size: 15px;
-		}
+		
 		@media screen and (max-width: 750px){
             .form-content {
                 flex-wrap: wrap;
             }
         }
+
+        .form-post {
+        	text-align: left;
+        }
+        
+
 	</style>
 	<script>
 		var num1,num2;
@@ -161,12 +163,12 @@
 	</header>    
 	<div class="form-content">
 		<div class="form-post">
-			<h2 id="postTitle"></h2>
+			<h1 id="post-title"><b>Como mapear o comportamento do seu cliente ideal: o guia completo</b></h1>
 			<br/>
-			<p id="postText">Falta pouco para você receber o seu e-book! Preencha agora e descubra quem é seu cliente ideal.</p>
+			<p id="post-text">Como descobrir o que o seu cliente ideal pensa? Quais são as suas principais dores? Você vai aprender sobre como a sua estratégia depende dessa análise!</p>
 		</div>
 		<div class="form-box">
-			<h5> Preencha aqui para usar o kit</h5>
+			<h5 class="titulo-box"> Falta pouco para você receber o seu e-book! Preencha agora e descubra quem é seu cliente ideal.</h5>
 			<div class="margin-top-one">
 				<div class="name-form">
 					<label class="form-label">Nome:</label>	
