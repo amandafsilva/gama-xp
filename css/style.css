@@ -87,7 +87,7 @@ header ul li a:hover {
 	height:100%;
 	display: flex;
     align-items: flex-start;
-    justify-content: center;
+	justify-content: center;
 }
 
 .cover-subtitle {
@@ -408,6 +408,24 @@ footer ul li a:hover {
 	.quiz-button {
 		margin-top: 1.5em;
 	}
+	.cover-title{
+		font-size: 20px;
+	}
+	.cover-subtitle{
+		font-size: 12px;
+	}
+	.copytitle{
+		font-size: 14px;
+	}
+	.cover-container{
+		
+	margin-left:3.75%;
+	}
+	.copy-button{
+		font-size:10px;
+	}
+
+	
 }
 
 @media screen and (max-width: 550px){
@@ -456,6 +474,26 @@ footer ul li a:hover {
 
 	#coverPost {
 		width: 90%;
+	}
+	.cover-title{
+		font-size: 16px;
+	}
+	.cover-subtitle{
+		font-size: 10px;
+	}
+	.copytitle{
+		font-size: 10px;
+	}
+	.cover-container{
+		
+	margin-left:3.75%;
+	}
+	.copy-button{
+		font-size:8px;
+		width: fit-content;
+	}
+	.copy{
+		width:12%;
 	}
 }	
 
