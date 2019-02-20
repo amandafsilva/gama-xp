@@ -137,8 +137,8 @@
 				}
 				else if(document.getElementById("captchatext").value != num1+num2){
 					alert("O número digitado está incorreto!");
-					num1 = Math.floor((Math.random() * 20) + 1);
-					num2 = Math.floor((Math.random() * 20) + 1);
+					num1 = Math.floor((Math.random() * 10) + 1);
+					num2 = Math.floor((Math.random() * 10) + 1);
 					document.getElementById("captcha").innerHTML = `${num1}+${num2}`;
 				}else{
 					//TODO: Cadastra lead e envia ebook
