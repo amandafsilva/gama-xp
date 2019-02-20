@@ -62,9 +62,10 @@
 			margin-top:10px;
 		}
 		hr{
-  			margin: 3em 0;
-			width:100%;
+			margin: 0;
+			width: 100%;
 			border-top: 2px solid grey;
+			margin-top: 3em;
 		}
 		.keywords{
   			color: grey;
@@ -193,7 +194,7 @@
 			<div id="postText"></div>
 			<div class="post-image-container">
 				<a class="cover-button" href="form.html">Quero meu ebook</a>
-				<img div="imgPost" src=""/>
+				<img div="imgPost" src="img/blog-post.jpg"/>
 			</div>
 			<hr>
 			<div class="keywords"><p id='keywordsp'></p></div>
@@ -238,7 +239,6 @@
 					document.querySelector('#nameEscritor').innerHTML = `${e[0].escritor}`
 					document.querySelector('.descricaoPerfil').innerHTML = `${e[0].escritorResumo}`
 					document.querySelector('#keywordsp').innerHTML = `${e[0].tags}` 
-					document.querySelector('#imgPost').setAttribute('src', `https://gamaexp17-1.herokuapp.com/${e.caminho}${e.fotoNome}`)
 				})
 			}
 		})
