@@ -478,6 +478,10 @@ footer ul li a:hover {
 		justify-content: center;
 		align-items: center;
 	}
+
+	.quiz-title {
+		width: 75%;
+	}
 }
 
 /* Blog */
