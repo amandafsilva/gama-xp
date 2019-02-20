@@ -108,7 +108,7 @@ header ul li a:hover {
 .banner-bottom {
 	display:flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	align-items: flex-end;
 	width:100%;
 }
@@ -119,12 +119,12 @@ header ul li a:hover {
 	text-align:center;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
 	padding: 20px;
 }
 .copytitle {
-	text-align:left;
+	text-align:center;
 	color: #fff;
 	font-weight: bold;
 	font-size: 18px;
@@ -135,6 +135,7 @@ header ul li a:hover {
 	color: #fff;
 	font-size: 12px;
 	margin-bottom:10px;
+	display:none;
 }
 .top-title{
 	width: 100%;
