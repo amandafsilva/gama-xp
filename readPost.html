@@ -246,8 +246,13 @@
 
 	<script>
 		document.addEventListener("DOMContentLoaded", event => {
+<<<<<<< HEAD
         var delay = 5000;
         var cookie_expire = 1;//15/(24*60);
+=======
+        var delay = 10000;
+        var cookie_expire = 10/(24*60);
+>>>>>>> 5e2f37a8d12aad0928eac7a3374c0dfcfb129044
         var cookie = localStorage.getItem("popbanner");
         if(cookie == undefined || cookie == null) {
             cookie = 0;
@@ -277,7 +282,7 @@
 	</script>
 	<div id="list-builder"></div>
 	<div id="popup-box">
-		<img src="img/closebanner.png" id="popup-close" style="position:relative; left:54.5%; top:-40px; width:4%;"/>
+		<img src="img/closebanner.png" id="popup-close" style="position:relative; left:54.5%; top:-40px; width:4%; display:none;"/>
 		<div id="popup-box-content">
 			<h2 style="top:-20px;position:relative;">Cadastre-se para transformar o seu negócio!</h2>
 			<form id="popup-form" action="https://email_list_service_api.com">

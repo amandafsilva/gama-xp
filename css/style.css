@@ -87,7 +87,7 @@ header ul li a:hover {
 	height:100%;
 	display: flex;
     align-items: flex-start;
-    justify-content: center;
+	justify-content: center;
 }
 
 .cover-subtitle {
@@ -108,7 +108,7 @@ header ul li a:hover {
 .banner-bottom {
 	display:flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	align-items: flex-end;
 	width:100%;
 }
@@ -119,12 +119,12 @@ header ul li a:hover {
 	text-align:center;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
 	padding: 20px;
 }
 .copytitle {
-	text-align:left;
+	text-align:center;
 	color: #fff;
 	font-weight: bold;
 	font-size: 18px;
@@ -135,6 +135,7 @@ header ul li a:hover {
 	color: #fff;
 	font-size: 12px;
 	margin-bottom:10px;
+	display:none;
 }
 .top-title{
 	width: 100%;
@@ -342,7 +343,6 @@ footer ul li a:hover {
 
 .quiz-container {
 	display: flex;
-    /* justify-content: space-evenly; */
     background-image: url(../img/quiz-cover.jpg);
     background-size: cover;
     background-position: center;
@@ -353,14 +353,14 @@ footer ul li a:hover {
     justify-content: space-evenly;
 }
 
-.quiz-container .quiz-button {
+.quiz-button {
 	border: 0;
     border-radius: 30px;
     background-color: #ebc70a;
     padding: 1em;
     font-weight: bold;
     font-size: 15px;
-    width: fit-content;
+    padding: 1em 3em;
     box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.3);
     margin-top: .5em;
     outline-style: none;
@@ -407,6 +407,24 @@ footer ul li a:hover {
 	.quiz-button {
 		margin-top: 1.5em;
 	}
+	.cover-title{
+		font-size: 20px;
+	}
+	.cover-subtitle{
+		font-size: 12px;
+	}
+	.copytitle{
+		font-size: 14px;
+	}
+	.cover-container{
+		
+	margin-left:3.75%;
+	}
+	.copy-button{
+		font-size:10px;
+	}
+
+	
 }
 
 @media screen and (max-width: 550px){
@@ -455,6 +473,26 @@ footer ul li a:hover {
 
 	#coverPost {
 		width: 90%;
+	}
+	.cover-title{
+		font-size: 16px;
+	}
+	.cover-subtitle{
+		font-size: 10px;
+	}
+	.copytitle{
+		font-size: 10px;
+	}
+	.cover-container{
+		
+	margin-left:3.75%;
+	}
+	.copy-button{
+		font-size:8px;
+		width: fit-content;
+	}
+	.copy{
+		width:12%;
 	}
 }	
 
