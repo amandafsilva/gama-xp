@@ -27,7 +27,7 @@
 
 		gtag('config', 'UA-134712503-1');
 	</script>
-
+<meta name="google-site-verification" content="sEBe45K822qIlTUQzla2-ly5A5siEIbo4C4L57SxwmM" />
 </head>
 <body>
 	<header>
@@ -143,11 +143,11 @@
 					let posts = e.map((e) => {
 						var divpost = document.createElement('div')
 						divpost.classList.add('post')
-						divpost.setAttribute('id', e._id)
+						divpost.setAttribute('id', e.link)
 						var a = document.createElement('a')
 						//a.setAttribute('href', 'readPost')
 						a.setAttribute('style', 'text-decoration: none; outline-style: none;')
-						a.setAttribute('id', e._id)
+						a.setAttribute('id', e.link)
 						a.setAttribute('onclick', 'saveId(event, this.id)')
 						var img = document.createElement('img')
 						img.setAttribute('src', `https://gamaexp17-1.herokuapp.com/${e.caminho}${e.fotoNome}`)
@@ -173,11 +173,11 @@
 	</script>
 
 	<script type="text/javascript">
-		function saveId(e, id){
+		function saveId(e, link){
 			e.preventDefault()
 			//console.log(id)
 			//sessionStorage.setItem('id', id)
-			window.location.href = 'readPost?id='+id
+			window.location.href = 'readPost?post='+link
 		}
 	</script>
 

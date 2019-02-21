@@ -239,11 +239,11 @@
 	<script type="text/javascript">
 		var url_string = window.location.href
 		var url = new URL(url_string);
-		let id = url.searchParams.get("id");
+		let link = url.searchParams.get("post");
 
 		let escritorId = ''
 
-		fetch('https://gamaexp17-1.herokuapp.com/postId/'+id).then((resp) => {
+		fetch('https://gamaexp17-1.herokuapp.com/postId/'+link).then((resp) => {
 			if(resp.status == 200){
 				resp.json().then((e) => {
 					console.log(e)
