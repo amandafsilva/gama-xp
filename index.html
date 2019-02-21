@@ -148,6 +148,7 @@
 						//a.setAttribute('href', 'readPost')
 						a.setAttribute('style', 'text-decoration: none; outline-style: none;')
 						a.setAttribute('id', e.link)
+						a.setAttribute('target', 'new')
 						a.setAttribute('onclick', 'saveId(event, this.id)')
 						var img = document.createElement('img')
 						img.setAttribute('src', `https://gamaexp17-1.herokuapp.com/${e.caminho}${e.fotoNome}`)
@@ -177,7 +178,7 @@
 			e.preventDefault()
 			//console.log(id)
 			//sessionStorage.setItem('id', id)
-			window.location.href = 'readPost?post='+link
+			window.location.href = 'https://www.dataquestbr.com.br/readPost?post='+link
 		}
 	</script>
 

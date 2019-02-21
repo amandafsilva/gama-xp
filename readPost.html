@@ -195,7 +195,7 @@
 			<p class="dataPost" id="dataPost"></p>
 			<div id="postText"></div>
 			<div class="post-image-container">
-				<a class="cover-button" href="form.html">Quero meu ebook</a>
+				<a class="cover-button" href="https://www.dataquestbr.com.br/form?book=guia-para-mapear-o-comportamento-do-cliente">Quero meu ebook</a>
 				<img div="imgPost" src="img/blog-post.jpg"/>
 			</div>
 			<div class="keywords"><p id='keywordsp'></p></div>
@@ -246,7 +246,6 @@
 		fetch('https://gamaexp17-1.herokuapp.com/postId/'+link).then((resp) => {
 			if(resp.status == 200){
 				resp.json().then((e) => {
-					console.log(e)
 					document.querySelector('#postText').innerHTML = `${e[0].text}`
 					document.querySelector('#postTitle').innerHTML = `${e[0].titulo}` 
 					document.querySelector('#keywordsp').innerHTML = `${e[0].tags}`
