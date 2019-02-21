@@ -91,20 +91,25 @@ function insertLead(){
     }else{
         if(validateEmail(lemail)){
             let emailreplace = lemail.replace("@","at").replace(".","dot").replace(".","dot").replace(".","dot").replace(".","dot").replace(".","dot").replace(".","dot");
-            if(section!='quiz'){
-                firebase.database().ref('leads/').child(emailreplace).set({nome: lnome + " " + lsnome, email: lemail, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail)}, function(error){
+            if(section==='second-form'){
+                firebase.database().ref('leads/').child(emailreplace).set({nome: lnome + " " + lsnome, email: lemail, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail), secao: section}, function(error){
                 //firebase.database().ref('leads/').child(lemail).set('teste', function(error){
                     if(error) alert("ERRO: Email já cadastrado!");
                     else {
                         alert("Email cadastrado!");
-                        if(section='sform') location.href = "index.html";
+                        if(section='second-form') location.href = "index.html";
                     }
                 });
-            }else{
+            }else if(section==='form'){
+                firebase.database().ref('leads/').child(emailreplace).set({nome: lnome, email: lemail, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail), secao:section}, function(error){
+                    location.target = "_blank";
+                    window.location.href = 'https://gamaexp17-1.herokuapp.com/downloadBook/'+book;
+                });
+            }else {
                 //QUIZ
                 let locupacao = document.getElementById('ocupacao').value;
-                firebase.database().ref('leads/').child(emailreplace).set({nome: lnome, email: lemail, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail), ocupacao: locupacao}, function(error){
-                    location.target = "_blank"
+                firebase.database().ref('leads/').child(emailreplace).set({nome: lnome, email: lemail, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail), ocupacao: locupacao, secao:section}, function(error){
+                    location.target = "_blank";
                     location.href = 'https://quiz.tryinteract.com/#/5c6b09761db3ce0014ab10cb';
                 });
             }
