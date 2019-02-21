@@ -18,6 +18,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
+	<script>
+		var url_string = window.location.href
+		var url = new URL(url_string);
+		let book = url.searchParams.get("book");
+	</script>
+
 	<style>
 		header {
 			position: relative;
@@ -145,7 +151,7 @@
 				}else{
 					//TODO: Cadastra lead e envia ebook
 					insertLead();
-					window.location.href = 'https://gamaexp17-1.herokuapp.com/downloadBook'
+					window.location.href = 'https://gamaexp17-1.herokuapp.com/downloadBook/'+book
 				}
 			});
 		});
