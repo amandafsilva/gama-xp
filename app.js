@@ -101,14 +101,14 @@ function insertLead(){
                     }
                 });
             }else if(section==='form'){
-                firebase.database().ref('leads/').child(emailreplace).set({nome: lnome, email: lemail, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail), secao:section}, function(error){
+                firebase.database().ref('leads/').child(emailreplace).set({nome: lnome + " " + lsnome, email: lemail, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail), secao:section}, function(error){
                     location.target = "_blank";
                     window.location.href = 'https://gamaexp17-1.herokuapp.com/downloadBook/'+book;
                 });
             }else {
                 //QUIZ
                 let locupacao = document.getElementById('ocupacao').value;
-                firebase.database().ref('leads/').child(emailreplace).set({nome: lnome, email: lemail, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail), ocupacao: locupacao, secao:section}, function(error){
+                firebase.database().ref('leads/').child(emailreplace).set({nome: lnome + " " + lsnome, email: lemail, data: stringTime, ip: userIp, clientType: b2cORb2b(lemail), ocupacao: locupacao, secao:section}, function(error){
                     location.target = "_blank";
                     location.href = 'https://quiz.tryinteract.com/#/5c6b09761db3ce0014ab10cb';
                 });
